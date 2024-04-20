@@ -6,8 +6,6 @@ header {
     margin: auto;
 }
 .header-nav {
-    height: 100px;
-    background-color:#F4BA97;
     position: relative;
 }
 .nav-logo {
@@ -20,17 +18,16 @@ header {
     vertical-align: middle;
 }
 .nav-list {
-    height: 30px;
-    line-height: 20px;
     text-align: center;
+    background-color:#EFCFD0;
+    padding: 10px 0;
 }
 .nav-list a {
     color: #000;
     font-size: 16px;
     font-family: sans-serif;
     text-decoration: none;
-    padding: 0 60px;
-    
+    padding: 0 60px;   
 }
 .nav-icon {
     position: absolute;
@@ -44,8 +41,7 @@ header {
 }
 /* 第2區 導覽圖 */
 .home-banner {
-    width: 1263px;
-    height: 263px;
+    width: 1200px;
 }
 .banner img {
     width: 100%;
@@ -292,7 +288,7 @@ header {
 
 /* footer */
 footer {
-    background-color:#F4BA97;
+    background-color:#EFCFD0;
     padding: 10px 0;
 }
 .footer-item-list {
@@ -330,6 +326,9 @@ footer {
 .footer-contact p {
     font-size: 14px;
     padding: 20px 0;
+}
+.footer-contact a i {
+    color: #000;
 }
 .customer-service {
     margin: 0 30px;
