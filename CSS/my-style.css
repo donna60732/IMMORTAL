@@ -2,10 +2,12 @@
 body {
     font-family: sans-serif;
 }
-header {
+.header-nav {
     margin: auto;
 }
-.header-nav {
+.header-container {
+    width: 1200px;
+    margin: auto;
     position: relative;
 }
 .nav-logo {
@@ -42,76 +44,18 @@ header {
 /* 第2區 導覽圖 */
 .home-banner {
     width: 1200px;
+    margin: auto;
 }
 .banner img {
     width: 100%;
     vertical-align: middle;
 }
-/* 第3區 關於我們 */
-.section-about-us {
-    background-color:#F0E9E3;
-}
-.about-us {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.about-us-info {
-    margin-top: -142px;
-}
-.about-us-info h2 {
-    font-size: 24px;
-    text-align: center;
-    font-family: sans-serif;
-    padding-top: 20px;
-    padding-bottom: 10px;
-
-}
-.about-us-info h3 {
-    font-size: 24px;
-    text-align: center;
-    padding-top: 2px;
-    padding-bottom: 10px;
-    font-family:"simonetta";
-}
-.about-us-pic {
-    width: 250px;
-    height: 267px;
-}
-.about-us-pic img {
-    width: 100%;
-    border-radius: 200px 200px 0 0;
-}
-.about-us-txt {
-    text-align: center;
-    height: 300px;
-    margin-left: 40px;
-    padding: 10px;
-}
-.about-us-txt p {
-    font-size: 16px;
-    line-height: 50px;
-    text-align: start;
-    margin-bottom: 30px;
-}
-.about-us-txt a {
-    color: #000;
-    font-size: 14px;
-    font-family: sans-serif;
-    text-decoration: none;
-    background-color: #CDCFA7;
-    height: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-/*  第4區-母親節花禮 */
+/*  第3區-母親節花禮 */
 .section-festival {
     background-color: #FBF5F5;
 }
 .festival {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding: 40px 0 ;
 }
 .title-tc {
     font-size: 28px;
@@ -149,18 +93,74 @@ header {
     font-size: 14px;
     font-family:sans-serif;
     text-decoration: none;
-    background-color: #F6D382;
-    height: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
+    background-color: #F1DFD5;
+    padding: 10px 40px;
+    border-radius: 3px;
 }
+/* 第4區 關於我們 */
+.section-about-us {
+    background-color:#F0E9E3;
+}
+.about-us {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-us-info {
+    margin-top: -142px;
+}
+.about-us-info h2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 65px;
+    padding-bottom: 10px;
+}
+.about-us-info h3 {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    font-family:"simonetta";
+}
+.about-us-pic {
+    width: 250px;
+    height: 267px;
+}
+.about-us-pic img {
+    width: 100%;
+    border-radius: 200px 200px 0 0;
+}
+.about-us-txt {
+    text-align: center;
+    height: 300px;
+    margin-left: 40px;
+    padding: 10px;
+}
+.about-us-txt p {
+    font-size: 16px;
+    line-height: 50px;
+    text-align: start;
+    margin-bottom: 30px;
+}
+.about-us-txt a {
+    color: #000;
+    font-size: 14px;
+    font-family:sans-serif;
+    text-decoration: none;
+    background-color: #F1DFD5;
+    padding: 10px 40px;
+    border-radius: 3px;
+}
+
 /* 第5區 花禮品項 */
 .section-flower-items {
-    background-color: #CFD1A9;
+    background-color: #FFFCF7;
     padding: 50px 0 ;
 }
 .flower-items {
-    margin: 0 20px;
+    padding: 40px 0 ;
 }
 .flower-items-card {
     display: flex;
@@ -189,7 +189,6 @@ header {
 }
 .course-items {
     text-align: center;
-    position: relative;
 }
 .course-top-pic-list {
     display: flex;
@@ -197,14 +196,14 @@ header {
     justify-content: center;
 } 
 .course-top-pic {
-    width: 265 px;
-    height: 345 px;
+    width: 100 px;
+    height: 200 px;
 }
 .course-top-pic img {
     width: 100%;
 }
 .item {
-    background-color: #F6D381;
+    background-color: #F0E9E3;
     margin: 20px 425px;
     padding: 10px 0;
 }
@@ -228,34 +227,22 @@ header {
 .item-pic {
     width: 150px;
     height: 150px;
-    position: absolute;
-    top: 0;
-    right: 365px;
 }
 .item img  {
-    border-radius: 100%;
     width: 100%;
 } 
 .item-pic-wreath {
     width: 150px;
     height: 150px;
-    position: absolute;
-    left: 335px;
-    top: 170px;
 }
 .item-pic-wreath img  {
-    border-radius: 100%;
     width: 100%;
 }
 .item-pic-tree {
     width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 340px;
-    right:355px;    
+    height: 150px;  
 }
 .item-pic-tree img  {
-    border-radius: 100%;
     width: 100%;
 } 
 
@@ -300,6 +287,10 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.footer-logo {
+    width: 80px;
+    height: 80px;
+}
 .footer-logo img {
     width: 100%;
 }
@@ -325,7 +316,10 @@ footer {
 }
 .footer-contact p {
     font-size: 14px;
-    padding: 20px 0;
+    padding: 10px 0;
+}
+.footer-contact a {
+    text-decoration: none;
 }
 .footer-contact a i {
     color: #000;
@@ -772,4 +766,59 @@ footer {
     text-decoration: none;
     text-align: center;
     display: inline-block;
+}
+/* sign-in */
+.section-sign-in {
+    height: 500px;
+}
+.sign-in {
+    width: 420px;
+    padding: 40px 0;
+    margin: auto;
+}
+.sign-in h2 {
+    font-size: 24px;
+    padding: 20px 0;
+}
+.account-password input {
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    background-color: #EFCFD0;
+}
+.forget-password {
+    margin: 10px 0;
+}
+
+.forget-password a {
+    font-size: 12px;
+}
+.account-password button {
+    color: #FFF;
+    font-size: 14px;
+    font-family:sans-serif;
+    padding: 5px 85px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    background-color: #EFCFD0;
+}
+.other-sign-in {
+    display: flex;
+}
+.registered {
+    padding: 50px 0;
+}
+.registered h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.registered button {
+    color: #EFCFD0;
+    font-size: 14px;
+    font-family:sans-serif;
+    padding: 5px 80px;
+    border: 1px solid #EFCFD0;
+    border-radius: 3px;
+    background-color: #FFF;
+    
 }

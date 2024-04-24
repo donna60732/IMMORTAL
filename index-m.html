@@ -5,26 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
-    <!-- Noto-serif TC -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <!-- Simonetta -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/my-style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/CSS/style-m.css">
 </head>
 <body>
+    <input type="checkbox" id="menu-switch">
+    
     <!-- 第1區  -->
-    <header class="header-nav">
-        <div class="header-container">
+    <header>
+        <div class="header-nav">
             <div class="nav-logo">
-                <h1></h1>
                 <a href="index.html">
-                    <img src="images/banner-pic/LOGO-nav.svg" alt="logo">
+                    <img src="images/banner-pic/logo2.svg" alt="logo">
                 </a>
             </div>
             <nav class="nav-list">
@@ -33,20 +25,28 @@
                 <a href="product.html">花禮品項</a>
                 <a href="#">花藝課程</a>
                 <a href="contact.html">聯絡我們</a>
-            </nav> 
+            </nav>
             <div class="nav-icon">
                 <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
+                <a href="#"><i class="fi fi-rr-user"></i></a>
                 <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
             </div>
+            <label for="menu-switch" class="hb">
+                <!-- <i class="fi fi-rr-menu-burger"></i> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- ------------------------------------------>
             
         </div>
     </header>
-    <!-- 第2區 banner --> 
+    <!-- 第2區  --> 
         <div class="home-banner">
-            <img src="images/banner-pic/piccc.svg" alt="banner圖">
+            <img src="images/banner-pic/piccc.svg" alt="">
         </div>
-    <!-- 第3區 母親節花禮 -->
+
+    <!-- 第4區 母親節花禮 -->
     <section class="section-festival">
         <div class="festival">
             <h2 class="title-tc">母親節花禮</h2>
@@ -63,12 +63,12 @@
                 </div>
             </div>
             <div class="more-and">
-                <a href="festival.html">了解更多</a>
+                <a href="festival.html">more</a>
             </div>
         </div>
-    </section>    
-    
-    <!-- 第4區- 關於我們 -->
+    </section>
+
+    <!-- 第3區-關於我們 -->
     <section class="section-about-us">
         <div class="about-us">
             <div class="about-us-info">
@@ -117,9 +117,22 @@
         <div class="course">
             <h2 class="title-tc">花禮課程</h2>
             <h3 class="title-en">Course</h3>
+            <div class="course-top-pic-list">
+                <div class="course-top-pic">
+                    <img src="images/course/im-f-class.jpg" alt="花藝教室">
+                </div>
+                <div class="course-top-pic">
+                    <img src="images/course/imm-class.jpg" alt="花藝教室">
+                </div>
+                <div class="course-top-pic">
+                    <img src="images/course/immo-class.jpg" alt="花藝教室">
+                </div>
+                <div class="course-top-pic">
+                    <img src="images/course/im-class.jpg" alt="花藝教室">
+                </div>
+            </div>
             <div class="course-items">
                 <div class="item">
-                    
                     <h4>新春祈福注連繩</h4>
                     <p> 注連繩是極具日式的年節花禮，<br>
                         在新年前在門上繫一個手作注連繩，<br>
@@ -152,20 +165,6 @@
                     </div>
                 </div>
             </div>
-            <div class="course-top-pic-list">
-                <div class="course-top-pic">
-                    <img src="images/course/im-f-class.jpg" alt="花藝教室">
-                </div>
-                <div class="course-top-pic">
-                    <img src="images/course/imm-class.jpg" alt="花藝教室">
-                </div>
-                <div class="course-top-pic">
-                    <img src="images/course/immo-class.jpg" alt="花藝教室">
-                </div>
-                <div class="course-top-pic">
-                    <img src="images/course/im-class.jpg" alt="花藝教室">
-                </div>
-            </div>
         </div>
     </section>
 
@@ -196,17 +195,12 @@
         <div class="footer-item-list">
             <div class="footer-item">
                 <div class="footer-logo">
-                    <img src="images/banner-pic/LOGO-footer.jpg" alt="logo設計圖">
+                    <img src="images/logo-n.svg" alt="logo設計圖">
                 </div>
                 <div class="footer-info">
                     <h3>IMMORTAL 花藝坊</h3>
                     <p> 地址｜桃園市桃園區民光東路125號</p>
                     <p> 營業時間｜週二至週日 11:00-20:00 (週一公休)</p>
-                </div>
-                <div class="customer-service">
-                    <h3>顧客服務</h3>
-                    <a href="#">訂購流程</a>
-                    <a href="#">常見問題</a>
                 </div>
                 <div class="footer-contact">
                     <h3>聯絡我們</h3>
@@ -215,6 +209,12 @@
                     </a>
                     <a href="#"><i class="fi fi-brands-instagram"></i>
                     </a>
+                </div>
+                <div class="customer-service">
+                <h3>顧客服務</h3>
+                <a href="#">訂購流程</a>
+                <a href="#">常見問題</a>
+                <a href="#">售後服務</a>
                 </div>
             </div>
             <div class="footer-copyrights">
