@@ -1,25 +1,93 @@
+/* 第1區 */
 /* 手機版 */
-/* 共用版 */
-/* 桌機版 */
 #menu-switch {
     display: none;
 }
-.header-nav {
-    /* background-color: #f3ebeb; */
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    position: relative;
+@media screen and (max-width: 767px) {
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        position: relative;
+    }
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+    }
 }
-.header-nav .nav-logo {
-    width: 50px;
+@media screen and (min-width: 768px) {
+    .header-nav {
+        margin: auto;
+    }
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+        margin: auto;
+    }
 }
-.header-nav .nav-logo img {
+.nav-logo img {
     width:100%;
     vertical-align: middle;
 }
-.header-nav .hb {
+/* ------------------nav導覽列手機版------------- */
+@media screen and (max-width: 767px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+        background-color: #EFCFD0;
+        top: 100%;
+        left: 0;
+        width: 90%;
+    }
+    .nav-list a {
+        color: #000;
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+    .nav-icon {
+        margin: 20px 0;
+    }
+    .nav-icon a {
+        color: #000;
+        padding: 30px 15px;
+        text-decoration: none;
+    }
+}
+/* ------------nav-list 導覽列桌機版------------- */
+@media screen and (min-width: 768px) {
+    .nav-list {
+        /* display: flex; */
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-list a {
+        color: #000;
+        font-size: 16px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 0 60px;   
+    }
+    .nav-icon {
+        position: absolute;
+        top: 25px;
+        right: 225px;
+    }
+    .nav-icon input {
+        border: 1px solid #000;
+        border-radius: 10px;
+        outline: none;
+        display: none;
+    }
+    .nav-icon a {
+        color: #000;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+
+}
+/* --------------------漢堡選單----------------- */
+.hb {
     width: 40px;
     height: 40px;
     background-color: #888;
@@ -27,42 +95,728 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+    margin: 10px 0;
 }
-.header-nav span {
+.hb span {
     width: 80%;
     height: 2px;
     background-color: #fff;
-    /* background-color: #f3ebeb; */
-
-}
-.nav-list {
-    display: none;
-    position: absolute;
-    background-color: #EFCFD0;
-    top: 100%;
-    left: 0;
-    width: 90%;
-}
-.nav-list a {
-    color: #000;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-}
-.nav-list a + a {
-    border-top:1px solid #f3ebeb  ;
-}
-#menu-switch:checked ~ header .header-nav .nav-list {
-    display: block;
 }
 #menu-switch:checked ~ header .header-nav .hb {
     background-color: #fff;
 }
-.nav-icon a {
-    color: #000;
-    text-decoration: none;
+
+/* --------------hb選單手機版------------------ */
+@media screen and (max-width: 767px) {
+    .nav-list a + a {
+    border-top:1px solid #f3ebeb  ;
+    }
+    #menu-switch:checked ~ header .header-nav .nav-list{
+    display: block;
+    }
+}
+/* --------------hb選單桌機版(消失)------------- */
+@media screen and (min-width: 768px) {
+    .header-nav .hb {
+        display: none;
+    }
+}
+/* 第2區 banner */
+.banner img {
+    width: 100%;
+    vertical-align: middle;
+}
+/*----------------------第3區-母親節花禮------------------- */
+.section-festival {
+    background-color: #FBF5F5;
+}
+.festival {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .title-tc {
+        font-size: 22px;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 5px 0;
+    }
+    .title-en {
+        font-size: 16px;
+        text-align: center;
+        font-family:"simonetta"; 
+    }
+    .festival-pic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    .cards {
+        width: 300px;
+        height: 300px;
+    } 
+    .cards img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .more-and {
+        text-align: center;
+        display: block;
+        margin: 40px 0 ;
+    }
+    .more-and a {
+        color: #000;
+        font-size: 14px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
 }
 @media screen and (min-width: 768px) {
+    .title-tc {
+        font-size: 24px;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 5px 0;
+    }
+    .title-en {
+        font-size: 22px;
+        text-align: center;
+        font-family:"simonetta"; 
+    }
+    .festival-pic {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards {
+        width: 200px;
+        height: 200px;
+        margin:0 40px;   
+    }
+    .cards img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .more-and {
+        text-align: center;
+        display: block;
+        margin: 40px 0 ;
+    }
+    .more-and a {
+        color: #000;
+        font-size: 14px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
+}
+/*---------------------第4區 關於我們------------------------*/
+.section-about-us {
+    background-color:#F0E9E3;
+}
+.about-us {
+    max-width: 1200px;
+    padding: 40px 0;
+    margin: auto;
+}
+@media screen and (max-width: 767px) {
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-us-info h2 {
+        font-size: 18px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .about-us-info h3 {
+        font-size: 16px;
+        font-family:"simonetta";
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .about-us-pic {
+        width: 150px;
+        height: 167px;
+    }
+    .about-us-pic img {
+        width: 100%;
+        border-radius: 100px 100px 0 0;
+    }
+    .about-us-txt {
+        text-align: center;
+        height: 150px;
+        margin-left: 10px;
+        padding: 50px;
+    }
+    .about-us-txt p {
+        font-size: 14px;
+        line-height: 25px;
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    .about-us-txt a {
+        color: #000;
+        font-size: 14px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .about-us {
+        width: 1200px;
+        margin: auto;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-us-info {
+        margin-top: -142px;
+    }
+    .about-us-info h2 {
+        font-size: 24px;
+        text-align: center;
+        font-family: sans-serif;
+        padding-top: 65px;
+        padding-bottom: 10px;
+    }
+    .about-us-info h3 {
+        font-size: 22px;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 10px;
+        font-family:"simonetta";
+    }
+    .about-us-pic {
+        width: 250px;
+        height: 267px;
+    }
+    .about-us-pic img {
+        width: 100%;
+        border-radius: 200px 200px 0 0;
+    }
+    .about-us-txt {
+        text-align: center;
+        height: 300px;
+        margin-left: 40px;
+        padding: 10px;
+    }
+    .about-us-txt p {
+        font-size: 16px;
+        line-height: 50px;
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    .about-us-txt a {
+        color: #000;
+        font-size: 14px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
+
+}
+/*------------------- 第5區 花禮品項 ------------------------*/
+.section-flower-items {
+    background-color: #FFFCF7;
+}
+.flower-items {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0 ;
+}
+.card img {
+    width: 100%;
+    vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+    .flower-items-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 165px;
+        height: 165px;
+        margin: 15px;
+    }
+    .card a {
+        color: #000;
+        font-size: 16px;
+        font-family:sans-serif;
+        text-decoration: none;
+        display: block;
+    }
     
+}
+@media screen and (min-width: 768px) {
+    .section-flower-items {
+        background-color: #FFFCF7;
+    }
+    .flower-items {
+        width: 1200px;
+        margin: auto;
+        padding: 40px 0 ;
+    }
+    .flower-items-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }
+    .card {
+        width: 265px;
+        height: 265px;
+        margin: 30px;
+    }
+    .card a {
+        color: #000;
+        font-size: 16px;
+        font-family:sans-serif;
+        text-decoration: none;
+        display: block;
+    }
+}
+/*--------------------- 第6區 花藝課程 ---------------------*/
+    .section-course {
+        background-image:url(../images/dust.png);
+        padding: 40px 0;
+    }
+    
+@media screen and (max-width: 767px) {
+    .item {
+        border-bottom: 1px solid #888;
+        padding: 20px 0;
+        margin: 0 30px;
+        text-align: center; 
+    }
+    .item-pic {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    .item img  {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .item-card h4 {
+        font-size: 22px;
+        padding: 20px 0 10px;
+    }
+    .item-card p {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px 0 10px 0;
+    }
+    .course-items a {
+        color: #000;
+        font-size: 16px;
+        font-family: sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        margin: auto;
+    }
+    .right-arrow {
+        width: 5px;
+        height: 5px;
+        margin-top: 100px;
+        display: inline-block;
+        border-top: 3px solid #ccc;
+        border-left: 3px solid #ccc;
+        transform: rotate(135deg) 
+    }
+    
+}
+@media screen and (min-width: 768px) {
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #888;
+        padding: 20px 0;
+        margin: 0 375px;
+    }
+    .item-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .item img  {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .item-card {
+        height: 100px;
+        padding: 30px;
+    }
+    .item-card h4 {
+        font-size: 22px;
+    }
+    .item-card p {
+        font-size: 16px;
+    }
+    .course-items a {
+        color: #000;
+        font-size: 16px;
+        font-family: sans-serif;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: auto;
+    }
+    .right-arrow {
+        width: 5px;
+        height: 5px;
+        margin-top: 100px;
+        display: inline-block;
+        border-top: 3px solid #ccc;
+        border-left: 3px solid #ccc;
+        transform: rotate(135deg) 
+    }
+    .course-top-pic-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .course-top-pic {
+        width: 200px;
+        height: 200px;
+        margin: 20px 0;
+    }
+    .course-top-pic img {
+        width: 100%;
+    }
+}
+/* ------------------------------------------------- */
+/* footer */
+footer {
+    background-color:#EFCFD0;
+    padding: 10px 0;
+}
+@media screen and (max-width: 767px) {
+    .footer-item-list {
+        padding: 20px 20px ;
+    }
+    .footer-item {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+    }
+    .footer-logo img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .footer-info {
+        text-align: center;
+    }
+    .footer-info h3 {
+        font-size: 16px;
+        font-family: sans-serif;
+        padding-bottom: 10px;
+    }
+    .footer-info p {
+        font-size: 14px;
+        font-family: sans-serif;
+        line-height: 20px;
+        text-align: start;
+    }
+    /* 顧客服務 */
+    .customer-service {
+        padding: 10px 0 5px 0;
+
+    }
+    .customer-service h3 {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0 5px 0 ;
+    }
+    .customer-service a {
+        color: #000;
+        font-size: 14px; 
+        text-decoration: none;
+    }
+    /* 聯絡我們 */
+    .footer-contact {
+        padding: 10px 0 5px 0;
+    }
+    .footer-contact h3 {
+        font-size: 16px;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .footer-contact p {
+        font-size: 14px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    .footer-icon {
+        padding: 10px 0 5px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-icon a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .footer-icon a i {
+        color: #000;
+    }
+    
+    .footer-copyrights p {
+        font-size: 12px;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 10px 0;
+
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer-item-list {
+        padding: 20px;
+    }
+    .footer-item {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .footer-logo img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .footer-info {
+        line-height: 25px;
+        margin: 0 30px;
+    }
+    .footer-info h3 {
+        font-size: 16px;
+        font-family: sans-serif;
+        line-height: 25px;
+    }
+    .footer-info p {
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+    /* 顧客服務 */
+    .customer-service {
+        margin: 0 30px;
+    }
+    .customer-service h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .customer-service a {
+        color: #000;
+        font-size: 14px; 
+        text-decoration: none;
+        display: block;
+        line-height: 20px;
+    }
+    /* 聯絡我們 */
+    .footer-contact {
+        margin: 0 30px;
+    }
+    .footer-contact h3 {
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    .footer-contact p {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .footer-contact a {
+        text-decoration: none;
+    }
+    .footer-contact a i {
+        color: #000;
+    }
+    /* copyrights */
+    .footer-copyrights p {
+        font-size: 12px;
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* ---------------------------------------- */
+/* 內頁共用 */
+.banner-pic img {
+    width: 100%;
+    vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+    /* banner */
+    .banner-pic {
+        width: 757px;
+        position: relative;
+    }
+    .banner-txt {
+        text-align: center;
+        background-color: hsl(0, 100%, 100%,60%);
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        padding: 10px 20px;
+    }
+    .banner-txt h2 { 
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .banner-txt h3 { 
+        font-size: 14px;
+        font-family:"simonetta";
+    }
+    /* ------------------------麵包屑------------------------ */
+    .nav-breadcrumb {
+        height: 16px;
+        padding: 10px 10px ;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .nav-breadcrumb ol {
+        display: flex;
+    }
+    .nav-breadcrumb ol li {
+    font-size: 16px;
+    line-height: 20px;
+}
+    .nav-breadcrumb ol li a {
+    color: #000;
+    text-decoration: none;
+    }
+
+}
+@media screen and (min-width: 768px) {
+.banner-pic {
+    width: 1263px;
+    position: relative;
+}
+.banner-txt {
+    text-align: center;
+    background-color: hsl(0, 100%, 100%,60%);
+    position: absolute;
+    top: 50px;
+    left: 570px;
+    padding: 10px 20px;
+}
+.banner-txt h2 { 
+    font-size: 24px;
+    line-height: 30px;
+}
+.banner-txt h3 { 
+    font-size: 16px;
+    font-family:"simonetta";
+}
+/* 麵包屑 */
+.nav-breadcrumb {
+    height: 20px;
+    padding-left: 190px;
+}
+.nav-breadcrumb ol {
+    display: flex;
+}
+.nav-breadcrumb ol li {
+    font-size: 16px;
+    line-height: 20px;
+}
+.nav-breadcrumb ol li a {
+    color: #000;
+    text-decoration: none;
+    }
+}
+/* ------------------------內頁4花藝課程.html----------------- */
+@media screen and (max-width: 767px) {
+    .seasonal-flower-course {
+        background-color: #fff;
+        background-image:url(../images/dust.png);
+        padding: 20px 0; 
+    }
+    .flower-courses {
+        max-width: 1200;
+    }
+    .courses-title h4 {
+        font-size: 16px;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+
+}
+@media screen and (min-width: 768px) {
+    .seasonal-flower-course {
+        background-color: #fff;
+        background-image:url(../images/dust.png);
+        padding: 40px 0; 
+    }
+    .flower-courses {
+        max-width: 1200;
+    }
+    .courses-title h4 {
+        font-size: 22px;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .courses-title p {
+        font-size: 14px;
+        font-family: sans-serif;
+        text-align: center;
+        line-height: 20px;
+        padding: 5px 0;
+    }
+    .courses-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .courses-card {
+        margin: 10px;
+    }
+    .courses-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .courses-card-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .courses-card h5 {
+        font-size: 14px;
+        font-family: sans-serif;
+        padding: 5px 5px;
+        
+    }
+    .courses-card p {
+        font-size: 16px;
+        font-family:"simonetta";
+        padding: 0 5px;
+    }
 }
