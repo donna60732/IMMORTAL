@@ -3,6 +3,9 @@
 #menu-switch {
     display: none;
 }
+.header-nav {
+    padding: 5px 0;
+}
 @media screen and (max-width: 767px) {
     .header-nav {
         display: flex;
@@ -45,6 +48,7 @@
         margin: 10px 0;
         text-decoration: none;
     }
+    /* ----------------------------------------- */
     .nav-icon {
         margin: 20px 0;
     }
@@ -54,11 +58,44 @@
         text-decoration: none;
     }
 }
-/* ------------nav-list 導覽列桌機版------------- */
+/* ------------nav-list 導覽列平版橫式------------- */
 @media screen and (min-width: 768px) {
     .nav-list {
-        /* display: flex; */
-        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-list a {
+        color: #000;
+        font-size: 16px;
+        font-family: sans-serif;
+        text-decoration: none;
+        display: block;
+        padding: 5px 40px;
+        background-color: #fff;
+    }
+    /* -------------------------------- */
+    .nav-icon {
+        position: absolute;
+        top: 25px;
+        right: 70px;
+    }
+    /* .nav-icon input {
+        border: 1px solid #000;
+        border-radius: 10px;
+        outline: none;
+        display: none;
+    } */
+    .nav-icon a {
+        color: #000;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+}
+/* ------------nav-list 導覽列桌機版------------- */
+@media screen and (min-width: 1024px){
+    .nav-list {
+        display: flex;
+        justify-content: center;
         padding: 10px 0;
     }
     .nav-list a {
@@ -66,8 +103,12 @@
         font-size: 16px;
         font-family: sans-serif;
         text-decoration: none;
-        padding: 0 60px;   
+        display: block;
+        padding: 0 60px;
+        background-color: #fff;
     }
+    
+    /* -------------------------------- */
     .nav-icon {
         position: absolute;
         top: 25px;
@@ -84,7 +125,6 @@
         padding-left: 20px;
         text-decoration: none;
     }
-
 }
 /* --------------------漢堡選單----------------- */
 .hb {
@@ -103,22 +143,28 @@
     background-color: #fff;
 }
 #menu-switch:checked ~ header .header-nav .hb {
-    background-color: #fff;
+    background-color: #EFCFD0; 
 }
 
 /* --------------hb選單手機版------------------ */
 @media screen and (max-width: 767px) {
     .nav-list a + a {
-    border-top:1px solid #f3ebeb  ;
+        border-top:1px solid #f3ebeb  ;
     }
     #menu-switch:checked ~ header .header-nav .nav-list{
-    display: block;
+        display: block;
     }
 }
 /* --------------hb選單桌機版(消失)------------- */
 @media screen and (min-width: 768px) {
     .header-nav .hb {
         display: none;
+    }
+    .header-nav a + a {
+        border-top: none;
+    }
+    #menu-switch:checked ~ header .header-nav .nav-list{
+        display: flex;
     }
 }
 /* 第2區 banner */
@@ -156,8 +202,8 @@
         margin: 20px 0;
     }
     .cards {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     } 
     .cards img {
         width: 100%;
@@ -188,7 +234,8 @@
     .title-en {
         font-size: 22px;
         text-align: center;
-        font-family:"simonetta"; 
+        font-family:"simonetta";
+        padding-bottom:10px ;
     }
     .festival-pic {
         display: flex;
@@ -395,7 +442,7 @@
 }
 /*--------------------- 第6區 花藝課程 ---------------------*/
     .section-course {
-        background-image:url(../images/dust.png);
+        background-image:url(../images/material/dust.png);
         padding: 40px 0;
     }
     
@@ -444,7 +491,62 @@
     
 }
 @media screen and (min-width: 768px) {
-
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #888;
+        padding: 20px 0;
+        
+    }
+    .item-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .item img  {
+        width: 100%;
+    }
+    .item-card {
+        padding: 0 30px;
+    }
+    .item-card h4 {
+        font-size: 1.5rem;
+    }
+    .item-card p {
+        font-size: 1rem;
+    }
+    /* .course-items a {
+        color: #000;
+        font-size: 16px;
+        font-family: sans-serif;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: auto; */
+    /* } */
+    /* .right-arrow {
+        width: 5px;
+        height: 5px;
+        margin-top: 100px;
+        display: inline-block;
+        border-top: 3px solid #ccc;
+        border-left: 3px solid #ccc;
+        transform: rotate(135deg) 
+    } */
+    .course-top-pic-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .course-top-pic {
+        width: 150px;
+        height: 1500px;
+    } 
+    .course-top-pic img {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1024px){
     .item {
         display: flex;
         align-items: center;
@@ -459,7 +561,6 @@
     }
     .item img  {
         width: 100%;
-        vertical-align: middle;
     }
     .item-card {
         height: 100px;
@@ -480,7 +581,7 @@
         display: inline-block;
         margin: auto;
     }
-    .right-arrow {
+    /* .right-arrow {
         width: 5px;
         height: 5px;
         margin-top: 100px;
@@ -488,7 +589,7 @@
         border-top: 3px solid #ccc;
         border-left: 3px solid #ccc;
         transform: rotate(135deg) 
-    }
+    } */
     .course-top-pic-list {
         display: flex;
         align-items: center;
@@ -501,6 +602,42 @@
     }
     .course-top-pic img {
         width: 100%;
+    }
+}
+/*-------------------第7區 創意花禮 ------------------*/
+.section-creative{
+    padding: 40px 0;
+}
+@media screen and (max-width: 767px) {
+
+}
+@media screen and (min-width: 768px) {
+    .section-creative {
+        background-color: #F0E9E3;
+    }
+    .creative {
+        width: 1200px;
+        margin: auto;
+        padding: 30px 0;
+    }
+    .creative-pic-list {
+        width: 450px;
+        height: 450px;
+        display: flex;
+        margin: 0 200px;
+    }
+    .creative-pic {
+        width: 0px;
+        font-size: 40px;
+        flex-grow: 1;
+        overflow: hidden;
+        transition: 1s;
+    }
+    .creative-pic img {
+        width: 100%;
+    }
+    .creative-pic:hover {
+        flex-grow: 2;
     }
 }
 /* ------------------------------------------------- */
@@ -756,8 +893,7 @@ footer {
 /* ------------------------內頁4花藝課程.html----------------- */
 @media screen and (max-width: 767px) {
     .seasonal-flower-course {
-        background-color: #fff;
-        background-image:url(../images/dust.png);
+        background-image:url(../images/material/dust.png);
         padding: 20px 0; 
     }
     .flower-courses {

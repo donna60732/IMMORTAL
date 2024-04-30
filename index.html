@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
+    <!--------------------------------------icon-------------------------------------->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
-    <!-- Noto-serif TC -->
+    <!-----------------------Noto serif TC---------------------------------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <!-- Simonetta -->
+    <!-----------------------Simonetta--------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <!----------------------------css-------------------------------------------------------------------->
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style-m.css">
+    <link rel="stylesheet" href="./CSS/demo-styles.css">
+    <!-------------------- Link Swiper's CSS ----------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -35,9 +40,9 @@
             <a href="contact.html">聯絡我們</a>
         </nav>
         <div class="nav-icon">
-            <input type="search"> 搜尋
+            <!-- <input type="search"> -->
             <a href="#"><i class="fi fi-rr-search"></i></a>
-            <a href="#"><i class="fi fi-rr-user"></i></a>
+            <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
             <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
         </div>
         <label for="menu-switch" class="hb">
@@ -45,15 +50,68 @@
             <span></span>
             <span></span>
             <span></span>
-        </label>
-        <!-- ------------------------------------------>
-        
+        </label>  
     </div>
 </header>
 <!-- 第2區 banner --> 
-<div class="home-banner">
+<!-- <div class="home-banner">
     <img src="images/banner-pic/piccc.svg" alt="banner圖">
-</div>
+</div> -->
+<!-- Swiper -->
+<section class="section-banner">
+    <div class="home-banner">
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/banner-pic/nav-f.jpg" alt="banner圖">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner-pic/nav-p.jpg" alt="banner圖">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/banner-pic/nav-flower.jpg" alt="banner圖">
+            </div>
+        </div>
+        </div>    
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div>
+    </div>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        on: {
+            autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+        }
+    });
+</script>
+</section>
     <!-- 第3區 母親節花禮 -->
     <section class="section-festival">
         <div class="festival">
@@ -120,10 +178,10 @@
         </div>
     </section>
 
-    <!-- 第6區 花禮課程 -->
+    <!-- 第6區 花藝課程 -->
     <section class="section-course">
         <div class="course">
-            <h2 class="title-tc">花禮課程</h2>
+            <h2 class="title-tc">花藝課程</h2>
             <h3 class="title-en">Course</h3>
             <div class="course-items">
                 <div class="item">
@@ -177,7 +235,7 @@
                     <span class="right-arrow"></span>
                 </a>
             </div> 
-            <div class="course-top-pic-list">
+            <!-- <div class="course-top-pic-list">
                 <div class="course-top-pic">
                     <img src="images/course/im-f-class.jpg" alt="花藝教室">
                 </div>
@@ -190,16 +248,16 @@
                 <div class="course-top-pic">
                     <img src="images/course/im-class.jpg" alt="花藝教室">
                 </div>
-            </div> 
+            </div>  -->
         </div>
     </section>
 
-    <!-- 第7區 創意花禮 -->
-    <section class="section-creative">
+    <!------------------ 第7區 創意花禮 --------------------->
+    <!-- <section class="section-creative">
         <div class="creative">
             <h2 class="title-tc">創意花禮</h2>
             <h3 class="title-en">Creative flower</h3>
-            <!-- <div class="creative-pic-list">
+            <div class="creative-pic-list">
                 <div class="creative-pic">
                     <img src="images/Creative flower gifts/creative-flower .png" alt="創意花禮">
                 </div>
@@ -212,9 +270,9 @@
                 <div class="creative-pic">
                     <img src="images/Creative flower gifts/creative-model.png" alt="創意花禮">
                 </div>
-            </div>  -->
+            </div> 
         </div>
-    </section>
+    </section> -->
 
     <!-- footer -->
     <footer>
