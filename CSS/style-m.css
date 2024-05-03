@@ -8,23 +8,25 @@
 }
 @media screen and (max-width: 767px) {
     .header-nav {
+        background-color: #EFCFD0;
         display: flex;
         justify-content: space-between;
         padding: 5px;
         position: relative;
     }
     .nav-logo {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
 @media screen and (min-width: 768px) {
     .header-nav {
         margin: auto;
+        background-color: #EFCFD0;
     }
     .nav-logo {
-        width: 60px;
-        height: 60px;
+        width: 75px;
+        height: 75px;
         margin: auto;
     }
 }
@@ -32,12 +34,12 @@
     width:100%;
     vertical-align: middle;
 }
-/* ------------------nav導覽列手機版------------- */
+/* ------------------文字導覽列手機版------------- */
 @media screen and (max-width: 767px) {
     .nav-list {
+        background-color: #EFCFD0;
         display: none;
         position: absolute;
-        background-color: #EFCFD0;
         top: 100%;
         left: 0;
         width: 90%;
@@ -58,7 +60,7 @@
         text-decoration: none;
     }
 }
-/* ------------nav-list 導覽列平版橫式------------- */
+/* --------nav-list文字導覽列列平版橫式----------- */
 @media screen and (min-width: 768px) {
     .nav-list {
         display: flex;
@@ -69,9 +71,9 @@
         font-size: 16px;
         font-family: sans-serif;
         text-decoration: none;
+        background-color: #EFCFD0;
         display: block;
         padding: 5px 40px;
-        background-color: #fff;
     }
     /* -------------------------------- */
     .nav-icon {
@@ -79,12 +81,6 @@
         top: 25px;
         right: 70px;
     }
-    /* .nav-icon input {
-        border: 1px solid #000;
-        border-radius: 10px;
-        outline: none;
-        display: none;
-    } */
     .nav-icon a {
         color: #000;
         padding-left: 20px;
@@ -94,18 +90,19 @@
 /* ------------nav-list 導覽列桌機版------------- */
 @media screen and (min-width: 1024px){
     .nav-list {
+        background-color: #EFCFD0;
         display: flex;
         justify-content: center;
-        padding: 10px 0;
     }
     .nav-list a {
         color: #000;
         font-size: 16px;
         font-family: sans-serif;
         text-decoration: none;
+        background-color: #EFCFD0;
         display: block;
-        padding: 0 60px;
-        background-color: #fff;
+        padding: 5px 60px;
+        
     }
     
     /* -------------------------------- */
@@ -130,7 +127,8 @@
 .hb {
     width: 40px;
     height: 40px;
-    background-color: #888;
+    /* background-color: #eee; */
+    background-color: #A3383C;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -141,6 +139,7 @@
     width: 80%;
     height: 2px;
     background-color: #fff;
+
 }
 #menu-switch:checked ~ header .header-nav .hb {
     background-color: #EFCFD0; 
@@ -246,7 +245,7 @@
     .cards {
         width: 200px;
         height: 200px;
-        margin:0 40px;   
+        margin:0 20px;   
     }
     .cards img {
         width: 100%;
@@ -260,7 +259,7 @@
     .more-and a {
         color: #000;
         font-size: 14px;
-        font-family:sans-serif;
+        font-family: sans-serif;
         text-decoration: none;
         background-color: #F1DFD5;
         padding: 10px 40px;
@@ -372,7 +371,6 @@
     .about-us-txt a {
         color: #000;
         font-size: 14px;
-        font-family:sans-serif;
         text-decoration: none;
         background-color: #F1DFD5;
         padding: 10px 40px;
@@ -488,7 +486,6 @@
         border-left: 3px solid #ccc;
         transform: rotate(135deg) 
     }
-    
 }
 @media screen and (min-width: 768px) {
     .item {
@@ -497,7 +494,6 @@
         justify-content: center;
         border-bottom: 1px solid #888;
         padding: 20px 0;
-        
     }
     .item-pic {
         width: 150px;
@@ -511,9 +507,15 @@
     }
     .item-card h4 {
         font-size: 1.5rem;
+        /* font-size: 22px; */
+        padding: 10px 0;
+        font-family: sans-serif;
     }
     .item-card p {
         font-size: 1rem;
+        /* font-size: 14px; */
+        font-family: sans-serif;
+        line-height: 20px;
     }
     /* .course-items a {
         color: #000;
@@ -524,15 +526,6 @@
         display: inline-block;
         margin: auto; */
     /* } */
-    /* .right-arrow {
-        width: 5px;
-        height: 5px;
-        margin-top: 100px;
-        display: inline-block;
-        border-top: 3px solid #ccc;
-        border-left: 3px solid #ccc;
-        transform: rotate(135deg) 
-    } */
     .course-top-pic-list {
         display: flex;
         align-items: center;
@@ -563,33 +556,36 @@
         width: 100%;
     }
     .item-card {
-        height: 100px;
         padding: 30px;
     }
     .item-card h4 {
-        font-size: 22px;
+        font-size: 1.5rem;
+        /* font-size: 22px; */
+        padding: 10px 0;
+        font-family: sans-serif;
     }
     .item-card p {
-        font-size: 16px;
+        font-size: 1rem;
+        /* font-size: 14px; */
+        font-family: sans-serif;
+        line-height: 20px;
     }
     .course-items a {
-        color: #000;
+        /* color: #000;
         font-size: 16px;
         font-family: sans-serif;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        margin: auto;
+        margin: auto; */
+        color: #000;
+        font-size: 14px;
+        font-family: sans-serif;
+        text-decoration: none;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
     }
-    /* .right-arrow {
-        width: 5px;
-        height: 5px;
-        margin-top: 100px;
-        display: inline-block;
-        border-top: 3px solid #ccc;
-        border-left: 3px solid #ccc;
-        transform: rotate(135deg) 
-    } */
     .course-top-pic-list {
         display: flex;
         align-items: center;
@@ -832,7 +828,7 @@ footer {
         font-size: 14px;
         font-family:"simonetta";
     }
-    /* ------------------------麵包屑------------------------ */
+    /* ---------------------麵包屑-------------------- */
     .nav-breadcrumb {
         height: 16px;
         padding: 10px 10px ;
@@ -843,12 +839,12 @@ footer {
         display: flex;
     }
     .nav-breadcrumb ol li {
-    font-size: 16px;
-    line-height: 20px;
-}
+        font-size: 16px;
+        line-height: 20px;
+    }
     .nav-breadcrumb ol li a {
-    color: #000;
-    text-decoration: none;
+        color: #000;
+        text-decoration: none;
     }
 
 }
@@ -904,8 +900,6 @@ footer {
         text-align: center;
         padding: 5px 0;
     }
-
-
 }
 @media screen and (min-width: 768px) {
     .seasonal-flower-course {
@@ -955,4 +949,315 @@ footer {
         font-family:"simonetta";
         padding: 0 5px;
     }
+}
+/* ----------------------------------------- */
+/* 第 2 頁:Festival */
+@media screen and (max-width: 767px) {
+    .product-categories {
+        padding: 30px 0;
+    }
+    .festival-item {
+        text-align: center;
+    }
+    .festival-item h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .product-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .product-card {
+        background-color: #EFEEEE;
+        margin: 0 10px;
+    }
+    .product-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .product-card-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .product-card h5 { 
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    .product-card p { 
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+    .festival-more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .festival-more a {
+        color: #000;
+        font-size: 12px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #CDCFA7;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .product-categories {
+        padding: 30px 0;
+    }
+    .festival-item {
+        text-align: center;
+    }
+    .festival-item h4 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .product-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .product-card {
+        background-color: #EFEEEE;
+        margin: 0 10px;
+    }
+    .product-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .product-card-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .product-card h5 { 
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    .product-card p { 
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+    .festival-more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .festival-more a {
+        color: #000;
+        font-size: 12px;
+        font-family:sans-serif;
+        text-decoration: none;
+        background-color: #CDCFA7;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+}
+/* 第 3 頁: about-us */
+
+@media screen and (max-width: 767px) {
+    .about-shop-pic {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+        display: none;
+    }
+    .about-shop-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .about-txt {
+        height: 250px;
+        padding-top: 50px;
+    }
+    .about-txt p {
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .about-info-txt {
+        text-align: center;
+        padding: 0 50px;
+        height: 300px;
+    }
+    .about-info-txt p {
+        padding: 40px;
+        font-size: 14px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .about-shop-pic {
+        width: 880px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+        gap: 10px;
+    }
+    .about-shop-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .about-txt {
+        height: 250px;
+        padding-top: 50px;
+    }
+    .about-txt p {
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .about-info {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-map {
+        width: 600px;
+        height: 450px;
+    }
+    .about-info-txt {
+        height: 450px;
+        text-align: center;
+        background-color: #F0E9E3;
+    }
+    .about-info-txt p {
+        padding-top: 80px;
+        font-size: 14px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1024px){
+    .about-shop-pic {
+        width: 880px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+        gap: 10px;
+    }
+    .about-shop-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .about-txt {
+        height: 250px;
+        padding-top: 50px;
+    }
+    .about-txt p {
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .about-info {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-map {
+        width: 600px;
+        height: 450px;
+    }
+    .about-info-txt {
+        height: 450px;
+        text-align: center;
+        padding: 0 50px;
+        background-color: #F0E9E3;
+    }
+    .about-info-txt p {
+        padding-top: 80px;
+        font-size: 14px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+
+/* 第 4 頁:product */
+@media screen and (max-width: 767px) {
+    
+}
+@media screen and (min-width: 768px) {
+
+}
+
+/* 第 5 頁: course*/
+@media screen and (max-width: 767px) {
+    
+}
+@media screen and (min-width: 768px) {
+
+}
+
+/* 第 6 頁:contact */
+@media screen and (max-width: 767px) {
+    
+}
+@media screen and (min-width: 768px) {
+
+}
+
+/*第 7 頁:sign-in */
+@media screen and (min-width: 768px){
+
+}
+@media screen and (min-width: 768px) {
+.section-sign-in {
+    height: 500px;
+}
+.sign-in {
+    width: 420px;
+    padding: 40px 0;
+    margin: auto;
+}
+.sign-in h2 {
+    font-size: 24px;
+    padding: 20px 0;
+}
+.account-password input {
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    background-color: #EFCFD0;
+}
+.forget-password {
+    margin: 10px 0;
+}
+.forget-password a {
+    font-size: 12px;
+}
+.account-password button {
+    color: #FFF;
+    font-size: 14px;
+    font-family:sans-serif;
+    outline: none;
+    background-color: #EFCFD0;
+    padding: 5px 90px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+}
+.other-sign-in {
+    display: flex;
+}
+.registered {
+    padding: 50px 0;
+}
+.registered h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.registered button {
+    color: #EFCFD0;
+    font-size: 14px;
+    font-family:sans-serif;
+    padding: 5px 80px;
+    border: 1px solid #EFCFD0;
+    border-radius: 3px;
+    background-color: #FFF;
+}
 }
