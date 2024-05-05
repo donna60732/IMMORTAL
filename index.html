@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
+    <!------------------Link Swiper's CSS ------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
     <!-------------------------icon------------------------->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
@@ -11,20 +14,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <!-----------------------Simonetta--------------------------->
+    <!---------------------Simonetta--------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
-    <!----------------------------css---------------------------->
+    <!---------------------css--------------------->
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style-m.css">
     <link rel="stylesheet" href="./CSS/demo-styles.css">
-    <!-------------------- Link Swiper's CSS -------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
+    
 <body>
     <input type="checkbox" id="menu-switch">
-<!-- 第1區  -->
+
+    <!-- 第1區  -->
 <header>
     <div class="header-nav">
         <div class="nav-logo">
@@ -37,22 +39,38 @@
             <a href="aboutus.html">關於我們</a>
             <a href="product.html">花禮品項</a>
             <a href="course.html">花藝課程</a>
-            <a href="contact.html">聯絡我們</a>
+            <a href="#" id="contactus_button">聯絡我們</a>
         </nav>
         <div class="nav-icon">
-            <!-- <input type="search"> -->
-            <a href="#"><i class="fi fi-rr-search"></i></a>
-            <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-            <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+            <div class="search-box" id="searchBox">
+                <input type="text" class="search-input" placeholder="尋找商品">
+            </div>
+            <a href="#" id="searchButton">
+                <i class="fi fi-rr-search"></i>
+            </a>
+            <a href="sign-in.html">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a href="#">
+                <i class="fi fi-rr-shopping-cart"></i>
+            </a>
         </div>
         <label for="menu-switch" class="hb">
-            <!-- <i class="fi fi-rr-menu-burger"></i> -->
             <span></span>
             <span></span>
             <span></span>
         </label>  
     </div>
+    <script>
+        var searchButton = document.getElementById("searchButton");
+        var searchBox = document.getElementById("searchBox");
+        searchButton.addEventListener("click", function () {
+            searchBox.classList.toggle("active");
+        });
+        
+    </script>
 </header>
+
 <!-- 第2區 banner --><!-- Swiper -->
 <section class="section-banner">
     <div class="home-banner">
@@ -115,16 +133,24 @@
             <h3 class="title-en">Happy Mother's Day</h3>
             <div class="festival-pic">
                 <div class="cards">
-                    <img src="images/festival-mother/mothers-flower-red.png" alt="母親節花禮">
+                    <span>NEW</span>
+                    <img src="images/festival-mother/bouquet.jpg" alt="康乃馨花束">
+                    <p>康乃馨花束</p>
                 </div>
                 <div class="cards">
-                    <img src="images/festival-mother/bouquet.jpg" alt="母親節花禮">
+                    <span>NEW</span>
+                    <img src="images/festival-mother/mother day.png" alt="康乃馨單花">
+                    <p>康乃馨單花</p>
                 </div>
                 <div class="cards">
-                    <img src="images/festival-mother/mother day.png" alt="母親節花禮">
+                    <span>NEW</span>
+                    <img src="images/festival-mother/mothers-flower-red.png" alt="康乃馨盆花">
+                    <p>康乃馨盆花</p>
                 </div>
                 <div class="cards">
-                    <img src="images/festival-mother/motherflower.png" alt="母親節花禮">
+                    <span>NEW</span>
+                    <img src="images/festival-mother/motherflower.png" alt="永生花盆花">
+                    <p>永生花盆花</p>
                 </div>
             </div>
             <div class="more-and">
@@ -256,6 +282,52 @@
             </div> 
         </div>
     </section> -->
+    <!------------------ 第8區 聯繫我們 --------------------->
+    <section id="section-contact-us">
+        <div class="container-contact-us">
+            <div class="contact-us" id="lightBox">
+                <h2>聯絡我們</h2>
+                <div class="contact-info-list">
+                    <div class="contact-info">
+                        <h3>主題說明</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡姓名</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡電話</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>內容描述</h3>
+                        <textarea name="" id=""></textarea>
+                    </div>
+                    <div class="send-out">
+                        <a href="#">送出</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        var contactus = document.getElementById("contactus_button");
+        
+        var section_contact_us = document.getElementById("section-contact-us");
+        var container_contact_us = document.getElementsByClassName("container-contact-us")[0];
+        
+        contactus.addEventListener("click", function () {
+            section_contact_us.style.display="block";
+        });
+        container_contact_us.addEventListener("click", function () {
+            section_contact_us.style.display="none";
+        });
+    </script>
+
 
     <!-- footer -->
     <footer>

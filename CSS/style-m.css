@@ -6,7 +6,14 @@
 .header-nav {
     padding: 5px 0;
 }
-
+.swiper-button-next, .swiper-button-prev {
+    color: #EFCFD0;
+    color: #A3383C;
+}
+.swiper-pagination-bullet-active {
+    background-color: #EFCFD0;
+    background-color: #A3383C;
+}
 @media screen and (max-width: 767px) {
     .header-nav {
         background-color: #EFCFD0;
@@ -44,12 +51,15 @@
         top: 100%;
         left: 0;
         width: 90%;
+        z-index: 15;
     }
     .nav-list a {
         font-size: 16px;
+        font-family: "noto-Noto serif TC";
         color: #000;
         display: block;
-        margin: 15px 0;
+        margin: 10px 0;
+        padding: 15px  0 0 15px  ;
         text-align: start;
         text-decoration: none;
     }
@@ -61,6 +71,40 @@
         color: #000;
         padding: 30px 15px;
         text-decoration: none;
+    }
+    /* ------------------------------- */
+    /* 搜尋框 */
+    .search-box {
+        position: fixed;
+        top: 20px;
+        right: 300px;
+        width: 100px;
+        height: 30px;
+        border:1px solid #000;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: transform 0.3s;
+        transform: translateX(700px);
+    }
+    .search-box.active {
+        transform: translateX(0px);
+        /*將搜尋框移入畫面 */
+    }
+    .search-input {
+        color: #000;
+        font-size: 12px;
+        border:none;
+        outline: none;
+        background-color: #EFCFD0;
+        padding: 8px 20px;
+    }
+    .search-button {
+        background-color: #EFCFD0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 0 0 18px 90px ;
     }
 }
 /* --------nav-list文字導覽列列平版橫式----------- */
@@ -89,6 +133,40 @@
         padding-left: 20px;
         text-decoration: none;
     }
+    /*-----------------------------------  */
+    /* 搜尋框 */
+    .search-box {
+        position: fixed;
+        top: 10px;
+        right: 330px;
+        width: 200px;
+        height: 40px;
+        border:1px solid #000;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: transform 0.3s;
+        transform: translateX(700px);
+    }
+    .search-box.active {
+        transform: translateX(0px);
+        /*將搜尋框移入畫面 */
+    }
+    .search-input {
+        color: #000;
+        font-size: 16px;
+        border:none;
+        outline: none;
+        background-color: #EFCFD0;
+        padding: 10px 22px;
+    }
+    .search-button {
+        background-color: #EFCFD0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 0 0 18px 90px ;
+    }
 }
 /* ------------nav-list 導覽列桌機版------------- */
 @media screen and (min-width: 1024px) {
@@ -106,22 +184,49 @@
         display: block;
         padding: 5px 60px;
     }
-    /* -------------------------------- */
+    /*--------------------icon選單-桌機版---------------------*/
     .nav-icon {
         position: absolute;
         top: 25px;
         right: 225px;
     }
-    .nav-icon input {
-        border: 1px solid #000;
-        border-radius: 10px;
-        outline: none;
-        display: none;
-    }
     .nav-icon a {
         color: #000;
         padding-left: 20px;
         text-decoration: none;
+    }
+    /* 搜尋框 */
+    .search-box {
+        position: fixed;
+        top: 10px;
+        right: 330px;
+        width: 200px;
+        height: 40px;
+        border:1px solid #000;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: transform 0.3s;
+        transform: translateX(700px);
+    }
+    .search-box.active {
+        transform: translateX(0px);
+        /*將搜尋框移入畫面 */
+    }
+    .search-input {
+        color: #000;
+        font-size: 16px;
+        border:none;
+        outline: none;
+        background-color: #EFCFD0;
+        padding: 10px 22px;
+    }
+    .search-button {
+        background-color: #EFCFD0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 0 0 18px 90px ;
     }
 }
 /* --------------------漢堡選單----------------- */
@@ -140,18 +245,15 @@
     width: 80%;
     height: 2px;
     background-color: #fff;
-
 }
 #menu-switch:checked~header .header-nav .hb {
     background-color: #EFCFD0;
 }
-
 /* --------------hb選單手機版------------------ */
 @media screen and (max-width: 767px) {
     .nav-list a+a {
-        border-top: 1px solid #f3ebeb;
+        border-top: 2px solid #f3ebeb;
     }
-
     #menu-switch:checked~header .header-nav .nav-list {
         display: block;
     }
@@ -161,11 +263,9 @@
     .header-nav .hb {
         display: none;
     }
-
     .header-nav a+a {
         border-top: none;
     }
-
     #menu-switch:checked~header .header-nav .nav-list {
         display: flex;
     }
@@ -175,7 +275,7 @@
     width: 100%;
     vertical-align: middle;
 }
-/*----------------------第3區-母親節花禮------------------- */
+/*---------------------第3區-母親節花禮---------------------*/
 .section-festival {
     background-color: #FBF5F5;
 }
@@ -185,6 +285,7 @@
     padding: 50px 0 30px 0;
 }
 @media screen and (max-width: 767px) {
+    /* 共用字體 */
     .title-tc {
         font-size: 22px;
         text-align: center;
@@ -196,26 +297,42 @@
         text-align: center;
         font-family: "simonetta";
     }
+    /* --------------------------- */
     .festival-pic {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
         margin: 20px 0;
     }
     .cards {
         width: 200px;
         height: 200px;
+        overflow: hidden; 
+        position: relative;
+    }
+    .cards span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #e7e78a;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        padding: 5px 15px;
+        z-index: 3;
     }
     .cards img {
         width: 100%;
-        border-radius: 50%;
-        vertical-align: middle;
+        vertical-align: top;
+        scale: 1;
+        transition: .5s;
+    }
+    .cards:hover img {
+        scale: 1.1;
     }
     .more-and {
         text-align: center;
         display: block;
-        margin-top: 10px;
+        margin-top: 30px;
     }
     .more-and a {
         color: #000;
@@ -252,12 +369,29 @@
         height: 200px;
         margin: 0 20px;
         overflow: hidden;
+        position: relative;
+    }
+    .cards span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #e7e78a;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        padding: 5px 15px;
+        z-index: 3;
     }
     .cards img {
         width: 100%;
         vertical-align: top;
         scale: 1;
         transition: .5s;
+    }
+    .cards p {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 60px;
+        text-align: center;
+        background-color: #ddd;
     }
     .cards:hover img {
         scale: 1.1;
@@ -278,9 +412,10 @@
     }
 }
 
-/*---------------------第4區 關於我們------------------------*/
+/*---------------------第4區 關於我們---------------------*/
 .section-about-us {
     background-color: #F0E9E3;
+    background-image: url(../images/material/shadow\ .png);
 }
 .about-us {
     max-width: 1200px;
@@ -320,6 +455,7 @@
     }
     .about-us-txt p {
         font-size: 14px;
+        font-family: "Simonetta";
         line-height: 25px;
         text-align: start;
         margin-bottom: 30px;
@@ -392,8 +528,8 @@
 }
 
 /*------------------- 第5區 花禮品項 ------------------------*/
-.section-flower-items {
-    background-color: #FFFCF7;
+    .section-flower-items {
+    background-image: url(../images/material/flower.jpg);
 }
     .flower-items {
         max-width: 1200px;
@@ -864,12 +1000,10 @@ footer {
         font-size: 18px;
         line-height: 30px;
     }
-
     .banner-txt h3 {
         font-size: 14px;
         font-family: "simonetta";
     }
-
     /* ---------------------麵包屑-------------------- */
     .nav-breadcrumb {
         height: 16px;
@@ -877,23 +1011,18 @@ footer {
         text-align: center;
         font-family: sans-serif;
     }
-
     .nav-breadcrumb ol {
         display: flex;
     }
-
     .nav-breadcrumb ol li {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
     }
-
     .nav-breadcrumb ol li a {
         color: #000;
         text-decoration: none;
     }
-
 }
-
 @media screen and (min-width: 768px) {
     .banner-pic {
         width: 1263px;
@@ -1334,15 +1463,29 @@ footer {
 @media screen and (max-width: 767px) {}
 
 @media screen and (min-width: 768px) {
+    #section-contact-us {
+        display: none;
+    }
+    .container-contact-us {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: rgb(221, 221, 221,60%);
+        z-index: 99;
+    }
     .contact-us {
-        width: 400px;
+        width: 600px;
         height: 500px;
-        margin: 10px 450px;
         border-radius: 20px;
+        margin: 10px;
+        padding: 30px 0;
         background-color: #F0E9E3;
     }
     .contact-us h2 {
-        font-size: 24px;
+        font-size: 22px;
         text-align: center;
         padding: 40px 0;
     }
@@ -1361,11 +1504,13 @@ footer {
     }
     .contact-info input {
         background-color: #F0E9E3;
-        height: 20px;
+        width: 200px;
+        height: 30px;
         border: 1px solid #000;
         outline: none;
     }
     .contact-info textarea {
+        width: 200px;
         background-color: #F0E9E3;
         border: 1px solid #000;
         outline: none;
@@ -1375,11 +1520,12 @@ footer {
         font-size: 14px;
         font-family: sans-serif;
         text-decoration: none;
-        background-color: #F1DFD5;
+        background-color: #EFCFD0;
         padding: 10px 40px;
+        margin: 10px 0 ;
         border-radius: 3px;
-        margin-top: 20px;
         display: inline-block;
+        
     }
 }
 
