@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-<!-- CSS -->
+<!---------------- CSS ------------------------------>
 <link rel="stylesheet" href="./CSS/reset.css">
 <link rel="stylesheet" href="./CSS/style-m.css">
 </head>
@@ -15,7 +15,7 @@
         <div class="header-nav">
             <div class="nav-logo">
                 <a href="index.html">
-                    <img src="images/banner-pic/LOGO-nav.svg" alt="logo">
+                    <img src="images/banner-pic/logo-pink.svg" alt="logo">
                 </a>
             </div>
             <nav class="nav-list">
@@ -23,33 +23,39 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
-            </nav> 
-            </nav>    
+                <a href="#"><span id="conTact">聯絡我們</span></a>
+            </nav>
             <div class="nav-icon">
+                <!-- <input type="search"> -->
                 <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="#"><i class="fi fi-rr-user"></i></a>
+                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
                 <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
             </div>
+            <label for="menu-switch" class="hb">
+                <!-- <i class="fi fi-rr-menu-burger"></i> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>  
         </div>
         <div class="banner-pic">
-            <img src="images/banner-pic/Banner-Contact-us.svg" alt="聯絡我們/導覽圖">
+            <img src="images/banner-pic/Banner-Course.svg" alt="banner-花藝課程">
             <div class="banner-txt">
-                <h2>聯絡我們</h2>
-                <h3>Contact us</h3>
+                <h2>花藝課程</h2>
+                <h3>Course</h3>
             </div>
         </div>
         <div class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">/聯絡我們</li>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">/聯絡我們</li>
+            </ol>
+        </div>
     </header>
     <section class="section-contact-us">
-        <div class="contact-us">
+        <div class="contact-us" id="lightBox" style="display:none">
             <h2>聯絡我們</h2>
             <div class="contact-info-list">
                 <div class="contact-info">
@@ -70,13 +76,24 @@
                 </div>
                 <div class="contact-info">
                     <h3>內容描述</h3>
-                    <input type="text">
+                    <textarea name="" id=""></textarea>
                 </div>
                 <div class="send-out">
                     <a href="#">送出</a> 
                 </div>
             </div>
         </div>
+        <script>
+            function showLightBox(){ //--------
+            let lightBox = document.getElementById("lightBox");
+            lightBox.style.display = "block";
+        }
+            function init(){
+            document.getElementById("conTact").onclick = showLightBox;
+        }
+
+        window.addEventListener("load", init, false);
+        </script>
     </section>
 <!-- footer -->
     <footer>

@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
+    <!-----------------------icon--------------------------->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/my-style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+    <link href="/your-path-to-uicons/css/uicons-rounded-regular.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <!------------------------- CSS ------------------------->
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style-m.css">
+    <!------------------------- JS ------------------------->
     <script src="./JS/course-picture.js"></script>
 </head>
 <body>
@@ -14,25 +20,31 @@
         <div class="header-nav">
             <div class="nav-logo">
                 <a href="index.html">
-                    <img src="images/banner-pic/LOGO-nav.svg" alt="logo">
+                    <img src="images/banner-pic/logo-pink.svg" alt="logo">
                 </a>
             </div>
             <nav class="nav-list">
                 <a href="festival.html">節慶限定</a>
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
-                <a href="index.html #section-course">花藝課程</a>
+                <a href="course.html">花藝課程</a>
                 <a href="contact.html">聯絡我們</a>
-            </nav> 
-            </nav>    
+            </nav>
             <div class="nav-icon">
+                <!-- <input type="search"> -->
                 <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="#"><i class="fi fi-rr-user"></i></a>
+                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
                 <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
             </div>
+            <label for="menu-switch" class="hb">
+                <!-- <i class="fi fi-rr-menu-burger"></i> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>  
         </div>
         <div class="banner-pic">
-                <img src="images/banner-pic/product.svg" alt="花禮品項">
+                <img src="images/banner-pic/Banner-Product.svg" alt="花禮品項">
         </div>
         <div class="nav-breadcrumb">
                 <ol class="breadcrumb">
@@ -46,7 +58,7 @@
                 </ol>
             </div>
     </header>
-    <section class="purchase-course-list">
+    <section class="section-purchase-course">
         <div class="purchase-course-info">
             <div class="purchase-course-pic">
                 <div class="purchase-course-pic-s">
@@ -77,11 +89,13 @@
                         <button>+</button>
                     </div>
                 </div>
-                <div class="purchase-product-favorites">
-                    <button>加入我的最愛</button>
-                </div>
                 <div class="purchase-product-cart">
                     <button>加入購物車</button>
+                </div>
+                <div class="purchase-product-favorites">
+                    <div class="favorites-pic">
+                        <button>加入我的最愛</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,37 +123,40 @@
             </div>
         </div>
     </section>
+    <!-- footer -->
     <footer>
-            <div class="footer-item-list">
-                <div class="footer-item">
-                    <div class="footer-logo">
-                        <img src="images/logo-n.svg" alt="">
-                    </div>
-                    <div class="footer-info">
-                        <h3>IMMORTAL 花藝坊</h3>
-                        <p> 地址｜桃園市桃園區民光東路125號</p>
-                        <p> 營業時間｜週二至週日 11:00-20:00 (週一公休)</p>
-                    </div>
-                    <div class="footer-contact">
-                        <h3>聯絡我們</h3>
-                        <p> 聯絡電話｜0981-706-680</p>
-                        <a href="#"><i class="fi fi-brands-facebook"></i>
-                        </a>
-                        <a href="#"><i class="fi fi-brands-instagram"></i>
-                        </a>
-                    </div>
-                    <div class="customer-service">
+        <div class="footer-item-list">
+            <div class="footer-item">
+                <div class="footer-logo">
+                    <img src="images/banner-pic/LOGO-footer.jpg" alt="logo設計圖">
+                </div>
+                <div class="footer-info">
+                    <h3>IMMORTAL 花藝坊</h3>
+                    <p> 地址｜桃園市桃園區民光東路125號</p>
+                    <p> 營業時間｜週二至週日 11:00-20:00 (週一公休)</p>
+                </div>
+                <div class="customer-service">
                     <h3>顧客服務</h3>
                     <a href="#">訂購流程</a>
                     <a href="#">常見問題</a>
                     <a href="#">售後服務</a>
+                </div>
+                <div class="footer-contact">
+                    <h3>聯絡我們</h3>
+                    <p> 聯絡電話｜0981-706-680</p>
+                    <div class="footer-icon">
+                        <a href="#"><i class="fi fi-brands-facebook"></i>
+                        </a>
+                        <a href="#"><i class="fi fi-brands-instagram"></i>
+                    </a>
                     </div>
                 </div>
-                <div class="footer-copyrights">
-                    <p> 本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。<span>© Copyrights 2018 IMMORTAL 花藝坊 . All rights reserved.</span>
-                    </p>
-                </div>
             </div>
+            <div class="footer-copyrights">
+                <p> 本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。<span>© Copyrights 2018 IMMORTAL 花藝坊 . All rights reserved.</span>
+                </p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

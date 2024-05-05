@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
-    <link rel='stylesheet'
+        <!--------------------Noto serif TC-------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+        <!-----------------------Simonetta--------------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <!----------------icon------------------------>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/reset.css">
@@ -19,7 +28,7 @@
         <div class="header-nav">
             <div class="nav-logo">
                 <a href="index.html">
-                    <img src="images/banner-pic/LOGO-nav.svg" alt="logo">
+                    <img src="images/banner-pic/logo-pink.svg" alt="logo">
                 </a>
             </div>
             <nav class="nav-list">
@@ -29,12 +38,18 @@
                 <a href="course.html">花藝課程</a>
                 <a href="contact.html">聯絡我們</a>
             </nav>
-            </nav>
             <div class="nav-icon">
+                <!-- <input type="search"> -->
                 <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="#"><i class="fi fi-rr-user"></i></a>
+                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
                 <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
             </div>
+            <label for="menu-switch" class="hb">
+                <!-- <i class="fi fi-rr-menu-burger"></i> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
         <div class="banner-pic">
             <img src="images/banner-pic/Banner-Course.svg" alt="banner-花藝課程">
@@ -58,8 +73,8 @@
             <div class="courses-title">
                 <h4>手作課程</h4>
                 <P>花店手作課程不僅可以學習到實用的花藝技巧<br>
-                還可以增加我們對花藝的興趣和了解，<br>
-                讓我們能在日常生活中更加懂得欣賞花卉之美。</P>
+                    還可以增加我們對花藝的興趣和了解，<br>
+                    讓我們能在日常生活中更加懂得欣賞花卉之美。</P>
             </div>
             <div class="courses-cards">
                 <div class="courses-card">
@@ -72,7 +87,7 @@
                 <div class="courses-card">
                     <div class="courses-card-pic">
                         <img src="images/course/newyear-potted.png" alt="年節盆花">
-                        
+
                     </div>
                     <h5>年節盆花</h5>
                     <p>NT$2,980</p>
@@ -92,26 +107,35 @@
                     <p>NT$3,980</p>
                 </div>
             </div>
+            <div class="pagination">
+                <a href="#"> 
+                    <i class="fi fi-ts-angle-small-left"></i> 
+                </a> <!-- previous page -->
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#"> 
+                    <i class="fi fi-ts-angle-small-right"></i>
+                </a> <!-- next page -->
+            </div>
         </div>
     </section>
 
-<!-- footer -->
+    <!-- footer -->
     <footer>
         <div class="footer-item-list">
             <div class="footer-item">
                 <div class="footer-logo">
-                    <img src="images/banner-pic/LOGO-footer.jpg" alt="logo設計圖">
+                    <a href="index.html">
+                        <img src="images/banner-pic/LOGO-footer.jpg" alt="logo設計圖">
+                    </a>
                 </div>
                 <div class="footer-info">
                     <h3>IMMORTAL 花藝坊</h3>
                     <p> 地址｜桃園市桃園區民光東路125號</p>
                     <p> 營業時間｜週二至週日 11:00-20:00 (週一公休)</p>
-                </div>
-                <div class="customer-service">
-                    <h3>顧客服務</h3>
-                    <a href="#">訂購流程</a>
-                    <a href="#">常見問題</a>
-                    <a href="#">售後服務</a>
                 </div>
                 <div class="footer-contact">
                     <h3>聯絡我們</h3>
@@ -120,12 +144,19 @@
                         <a href="#"><i class="fi fi-brands-facebook"></i>
                         </a>
                         <a href="#"><i class="fi fi-brands-instagram"></i>
-                    </a>
+                        </a>
                     </div>
+                </div>
+                <div class="customer-service">
+                    <h3>顧客服務</h3>
+                    <a href="#">訂購流程</a>
+                    <a href="#">常見問題</a>
+                    <a href="#">售後服務</a>
                 </div>
             </div>
             <div class="footer-copyrights">
-                <p> 本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。<span>© Copyrights 2018 IMMORTAL 花藝坊 . All rights reserved.</span>
+                <p> 本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。<span>© Copyrights 2018 IMMORTAL 花藝坊 . All rights
+                        reserved.</span>
                 </p>
             </div>
         </div>
