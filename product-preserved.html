@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <!----------------------------css---------------------------->
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/style-m.css">
+<!-------------------------icon------------------------->
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+<!---------------------Noto serif TC------------------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+<!----------------------Simonetta---------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<!-------------------------css------------------------->
+<link rel="stylesheet" href="./CSS/reset.css">
+<link rel="stylesheet" href="./CSS/style-m.css">
+<!----------------------------------------------------->
 </head>
 <body>
+    <input type="checkbox" id="menu-switch">
     <header>
         <div class="header-nav">
             <div class="nav-logo">
@@ -22,20 +35,27 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>  
+            </label> 
         </div>
         <div class="banner-pic">
                 <img src="images/banner-pic/course.jpg" alt="永生花禮">
@@ -50,9 +70,9 @@
                         <a href="index.html">首頁</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="index.html">/花禮品項</a>
+                        <a href="index.html">/ 花禮品項</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">/永生花禮</li>
+                    <li class="breadcrumb-item active" aria-current="page">/ 永生花禮</li>
                 </ol>
         </div>
     </header>
@@ -60,7 +80,7 @@
         <div class="festival">
             <div class="product-categories">
                 <div class="festival-item">
-                    <span>花束</span>
+                    <h4>花束</h4>
                 </div>
                 <div class="product-cards">
                     <div class="product-card">
@@ -95,7 +115,7 @@
             </div>
             <div id="preserved-flowers" class="product-categories">
                 <div class="festival-item">
-                    <span>盆花</span>
+                    <h4>盆花</h4>
                 </div>
                 <div class="product-cards">
                     <div class="product-card">
@@ -130,7 +150,7 @@
             </div>
             <div class="product-categories">
                 <div class="festival-item">
-                <span>玻璃鐘罩花</span>
+                <h4>玻璃鐘罩花</h4>
                 </div>
                 <div class="product-cards">
                 <div class="product-card">
@@ -165,6 +185,7 @@
             </div>
         </div>    
     </section>
+
     <!-- footer -->
     <footer>
         <div class="footer-item-list">

@@ -45,14 +45,14 @@
                         </div>
                         <div class="contact-info">
                             <h3>Email</h3>
-                            <input type="text">
+                            <input type="email">
                         </div>
                         <div class="contact-info">
                             <h3>內容描述</h3>
-                            <textarea name="" id=""></textarea>
+                            <textarea style="resize:none"></textarea>
                         </div>
                         <div class="send-out">
-                            <a href="#">送出</a> 
+                            <button>送出</button>
                         </div>
                     </div>
                 </div>
@@ -110,9 +110,12 @@
         contactus.addEventListener("click", function () {
             section_contact_us.style.display="block";
         });
-        container_contact_us.addEventListener("click", function () {
-            section_contact_us.style.display="none";
+        container_contact_us.addEventListener("click", function (e) {
+            if(e.target.nodeName=="SECTION"){
+                section_contact_us.style.display="none";
+            }
         });
+
     </script>
 </header>
 

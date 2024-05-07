@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
-    <!--------------------------------------icon-------------------------------------->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
-    <!--  -->
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/style-m.css">
+<!-------------------------icon------------------------->
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+<!---------------------Noto serif TC------------------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+<!----------------------Simonetta---------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<!-------------------------css------------------------->
+<link rel="stylesheet" href="./CSS/reset.css">
+<link rel="stylesheet" href="./CSS/style-m.css">
+<!------------------------JS----------------------------->
     <script src="./JS/course-picture.js"></script>
+<!-- ------------------------------------------------- -->
 </head>
 <body>
     <header>
@@ -25,16 +36,23 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
