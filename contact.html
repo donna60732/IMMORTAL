@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="./CSS/style-m.css">
 </head>
 <body>
+
     <input type="checkbox" id="menu-switch">
     <header>
         <div class="header-nav">
@@ -23,7 +24,7 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="#"><span id="conTact">聯絡我們</span></a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
                 <!-- <input type="search"> -->
@@ -36,13 +37,13 @@
                 <span></span>
                 <span></span>
                 <span></span>
-            </label>  
+            </label>
         </div>
         <div class="banner-pic">
-            <img src="images/banner-pic/Banner-Course.svg" alt="banner-花藝課程">
+            <img src="images/banner-pic/banner-products.jpg" alt="banner-聯絡我們">
             <div class="banner-txt">
-                <h2>花藝課程</h2>
-                <h3>Course</h3>
+                <h2>聯絡我們</h2>
+                <h3>contact us</h3>
             </div>
         </div>
         <div class="nav-breadcrumb">
@@ -55,52 +56,55 @@
         </div>
     </header>
 
-    <!------------------ 第8區 聯繫我們 --------------------->
-<section id="section-contact-us">
-    <div class="container-contact-us">
-        <div class="contact-us" id="lightBox">
+    <!-- 第8區 聯繫我們 -->
+    <div id="container-contact-us">
+        <section class="section-contact-us">
+            <div class="contact-us" id="lightBox">
             <h2>聯絡我們</h2>
             <div class="contact-info-list">
-                <div class="contact-info">
-                    <h3>主題說明</h3>
-                    <input type="text">
-                </div>
-                <div class="contact-info">
-                    <h3>聯絡姓名</h3>
-                    <input type="text">
-                </div>
-                <div class="contact-info">
-                    <h3>聯絡電話</h3>
-                    <input type="text">
-                </div>
-                <div class="contact-info">
-                    <h3>Email</h3>
-                    <input type="text">
-                </div>
-                <div class="contact-info">
-                    <h3>內容描述</h3>
-                    <textarea name="" id=""></textarea>
-                </div>
-                <div class="send-out">
-                    <a href="#">送出</a> 
+                    <div class="contact-info">
+                        <h3>主題說明</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡姓名</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡電話</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <input type="email">
+                    </div>
+                    <div class="contact-info">
+                        <h3>內容描述</h3>
+                        <textarea style="resize:none"></textarea>
+                    </div>
+                    <div class="send-out">
+                        <button>送出</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
-<script>
-    let contactus = document.getElementById("contactus_button");
+    <script>
+        
+        var contactus = document.getElementById("contactus_button");
+        var container_contact_us = document.getElementById("container-contact-us");
+        var section_contact_us = document.getElementsByClassName("section-contact-us")[0];
+        
+        contactus.addEventListener("click", function () {
+            container_contact_us.style.display="block";
+        });
+        section_contact_us.addEventListener("click", function (e) {
+            if(e.target.nodeName=="SECTION"){
+                container_contact_us.style.display="none";
+            }
+        });
+    </script>
     
-    let section_contact_us = document.getElementById("section-contact-us");
-    let container_contact_us = document.getElementsByClassName("container-contact-us")[0];
-    
-    contactus.addEventListener("click", function () {
-        section_contact_us.style.display="block";
-    });
-    container_contact_us.addEventListener("click", function () {
-        section_contact_us.style.display="none";
-    });
-</script>
 <!-- footer -->
     <footer>
         <div class="footer-item-list">

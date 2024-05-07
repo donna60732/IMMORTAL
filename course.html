@@ -26,6 +26,39 @@
 </head>
 
 <body>
+        <!-- 第8區 聯繫我們 -->
+        <div id="container-contact-us">
+            <section class="section-contact-us">
+                <div class="contact-us" id="lightBox">
+                <h2>聯絡我們</h2>
+                <div class="contact-info-list">
+                        <div class="contact-info">
+                            <h3>主題說明</h3>
+                            <input type="text">
+                        </div>
+                        <div class="contact-info">
+                            <h3>聯絡姓名</h3>
+                            <input type="text">
+                        </div>
+                        <div class="contact-info">
+                            <h3>聯絡電話</h3>
+                            <input type="text">
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <input type="email">
+                        </div>
+                        <div class="contact-info">
+                            <h3>內容描述</h3>
+                            <textarea style="resize:none"></textarea>
+                        </div>
+                        <div class="send-out">
+                            <button>送出</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     <input type="checkbox" id="menu-switch">
     <header>
         <div class="header-nav">
@@ -82,6 +115,19 @@
             searchButton.addEventListener("click", function () {
                 searchBox.classList.toggle("active");
             });
+            
+            var contactus = document.getElementById("contactus_button");
+            var container_contact_us = document.getElementById("container-contact-us");
+            var section_contact_us = document.getElementsByClassName("section-contact-us")[0];
+            
+            contactus.addEventListener("click", function () {
+                container_contact_us.style.display="block";
+            });
+            section_contact_us.addEventListener("click", function (e) {
+                if(e.target.nodeName=="SECTION"){
+                    container_contact_us.style.display="none";
+                }
+            });
         </script>
     </header>
     <section class="seasonal-flower-course">
@@ -98,7 +144,7 @@
                         <img src="images/course/praying-rope.png" alt="新春祈福注連繩">
                     </div>
                     <h5>新春祈福注連繩</h5>
-                    <p>NT$1,980</p>
+                    <span>NT$1,980 /堂</span>
                 </div>
                 <div class="courses-card">
                     <div class="courses-card-pic">
@@ -106,21 +152,21 @@
 
                     </div>
                     <h5>年節盆花</h5>
-                    <p>NT$2,980</p>
+                    <span>NT$2,980 /堂</span>
                 </div>
                 <div class="courses-card">
                     <div class="courses-card-pic">
                         <img src="images/course/c-wreath.png" alt="聖誕花圈">
                     </div>
                     <h5>雪國之森-聖誕花圈</h5>
-                    <p>NT$2,980</p>
+                    <span>NT$2,980 /堂</span>
                 </div>
                 <div class="courses-card">
                     <div class="courses-card-pic">
                         <img src="images/course/course-tree.png" alt="聖誕小樹">
                     </div>
                     <h5>聖誕小樹</h5>
-                    <p>NT$3,980</p>
+                    <span>NT$3,980 /堂</span>
                 </div>
             </div>
             <div class="pagination">

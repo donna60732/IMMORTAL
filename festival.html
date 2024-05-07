@@ -22,6 +22,39 @@
     <!----------------------------------------------------->
 </head>
 <body>
+    <!-- 第8區 聯繫我們 -->
+    <div id="container-contact-us">
+        <section class="section-contact-us">
+            <div class="contact-us" id="lightBox">
+                <h2>聯絡我們</h2>
+                <div class="contact-info-list">
+                    <div class="contact-info">
+                        <h3>主題說明</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡姓名</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>聯絡電話</h3>
+                        <input type="text">
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <input type="email">
+                    </div>
+                    <div class="contact-info">
+                        <h3>內容描述</h3>
+                        <textarea style="resize:none"></textarea>
+                    </div>
+                    <div class="send-out">
+                        <button>送出</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>    
     <input type="checkbox" id="menu-switch">
     <header>
         <div class="header-nav">
@@ -77,6 +110,19 @@
             var searchBox = document.getElementById("searchBox");
             searchButton.addEventListener("click", function () {
                 searchBox.classList.toggle("active");
+            });
+            
+            var contactus = document.getElementById("contactus_button");
+            var container_contact_us = document.getElementById("container-contact-us");
+            var section_contact_us = document.getElementsByClassName("section-contact-us")[0];
+            
+            contactus.addEventListener("click", function () {
+                container_contact_us.style.display="block";
+            });
+            section_contact_us.addEventListener("click", function (e) {
+                if(e.target.nodeName=="SECTION"){
+                    container_contact_us.style.display="none";
+                }
             });
         </script>
     </header>

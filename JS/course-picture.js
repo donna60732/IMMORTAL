@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const big_image_3=document.querySelector("#big_image_3");
     const big_image_4=document.querySelector("#big_image_4");
 
-    small_image_1.style.border="2px solid  #fff";//#A3383C
+    small_image_1.style.border="2px solid  #EFCFD0";//#A3383C
     big_image_1.style.display="block";
     big_image_2.style.display="none";
     big_image_3.style.display="none";
