@@ -310,7 +310,7 @@ body {
 .festival {
     max-width: 1200px;
     margin: auto;
-    padding: 50px 0;
+    padding: 50px 0 25px 0;
 }
 @media screen and (max-width: 767px) {
     /* 共用字體 */
@@ -407,7 +407,7 @@ body {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin: 10px 0;
+        margin: 20px 0;
     }
     .cards {
         width: 200px;
@@ -443,7 +443,7 @@ body {
     }
     .festival-more-and {
         text-align: center;
-        margin: 40px 0;
+        margin: 35px 0;
     }
     .festival-more-and a {
         color: #000;
@@ -463,15 +463,14 @@ body {
 
 }
 /*---------------------第4區 關於我們----------------*/
-.section-about-us {
-    background-color: #F0E9E3;
-    background-image: url(../images/material/shadow\ .png);
-}
 .about-us {
     max-width: 1200px;
     margin: auto;
 }
 @media screen and (max-width: 767px) {
+    .section-about-us {
+        background-color: #F0E9E3;
+    }
     .about-us {
         display: flex;
         flex-direction: column;
@@ -538,6 +537,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .section-about-us {
+        background-color: #F0E9E3;
+        background-image: url(../images/material/shadow\ .png);
+        background-size: 50%;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
     .about-us {
         height: 500px;
         display: flex;
@@ -887,20 +893,6 @@ footer {
         line-height: 20px;
         text-align: start;
     }
-    /* 顧客服務 */
-    .customer-service {
-        padding: 10px 0 5px 0;
-    }
-    .customer-service h3 {
-        font-size: 16px;
-        text-align: center;
-        padding: 10px 0 5px 0;
-    }
-    .customer-service a {
-        color: #000;
-        font-size: 14px;
-        text-decoration: none;
-    }
     /* 聯絡我們 */
     .footer-contact {
         padding: 10px 0 5px 0;
@@ -930,6 +922,20 @@ footer {
     }
     .footer-icon a i {
         color: #000;
+    }
+    /* 顧客服務 */
+    .customer-service {
+        padding: 10px 0 5px 0;
+    }
+    .customer-service h3 {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0 5px 0;
+    }
+    .customer-service a {
+        color: #000;
+        font-size: 14px;
+        text-decoration: none;
     }
     .footer-copyrights p {
         font-size: 12px;
@@ -971,6 +977,28 @@ footer {
         font-size: 14px;
         font-family: sans-serif;
     }
+    /* 聯絡我們 */
+    .footer-contact {
+        margin: 0px 20px;
+    }
+    .footer-contact h3 {
+        margin: 10px 0;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    .footer-icon{
+        padding: 10px 20px 0 0 ;
+    }
+    .footer-contact p {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .footer-contact a {
+        text-decoration: none;
+    }
+    .footer-contact a i {
+        color: #000;
+    }
     /* 顧客服務 */
     .customer-service {
         margin: 0 30px;
@@ -986,28 +1014,6 @@ footer {
         display: block;
         line-height: 20px;
     }
-    /* 聯絡我們 */
-    .footer-contact {
-        margin: 0px 20px;
-    }
-    .footer-contact h3 {
-        margin: 10px 0;
-        font-size: 16px;
-        font-family: sans-serif;
-    }
-    .footer-icon{
-        padding: 10px 0;
-    }
-    .footer-contact p {
-        font-size: 14px;
-        padding: 5px 0;
-    }
-    .footer-contact a {
-        text-decoration: none;
-    }
-    .footer-contact a i {
-        color: #000;
-    }
     /* copyrights */
     .footer-copyrights p {
         font-size: 12px;
@@ -1016,7 +1022,6 @@ footer {
         margin-top: 20px;
     }
 }
-
 /* ---------------------------------------- */
 /* 內頁共用 */
 /* banner */
@@ -1110,7 +1115,6 @@ footer {
         text-decoration: none;
     }
 }
-
 /* ----------------------------------------- */
 /* 第 2 頁:Festival  + 第 9 頁:product-preserved.html*/
 @media screen and (max-width: 767px) {
@@ -1172,7 +1176,6 @@ footer {
         border-radius: 20px;
     }
 }
-
 @media screen and (min-width: 768px) {
     .product-categories {
         padding: 30px 0;
@@ -1228,7 +1231,6 @@ footer {
         padding: 5px 10px;
     }
 }
-
 /* 第 3 頁: about-us */
 .about-shop-pic img {
     width: 100%;
@@ -1507,7 +1509,8 @@ footer {
         padding: 20px 0;
     }
     .flower-courses {
-        max-width: 1200;
+        max-width: 1200px;
+        margin: auto;
     }
     .courses-title h4 {
         font-size: 16px;
@@ -1581,6 +1584,7 @@ footer {
     }
     .flower-courses {
         max-width: 1200px;
+        margin: auto;
     }
     .courses-title h4 {
         font-size: 22px;
@@ -1654,11 +1658,10 @@ footer {
 }
 
 /* 第 6 頁:contact */
-#section-contact-us {
+    #container-contact-us {
         display: none;
-        /* position: fixed; */
     }
-    .container-contact-us {
+    .section-contact-us {
         width: 100%;
         height: 100%;
         display: flex;
@@ -1672,7 +1675,6 @@ footer {
     .contact-us {
         width: 600px;
         height: 500px;
-        /* height: 100%; */
         border-radius: 5px;
         margin: 10px;
         padding: 30px 0;
@@ -1710,22 +1712,22 @@ footer {
         margin: auto;
     }
     .contact-info textarea {
-        width: 200px;
+        width: 205px;
+        height: 50px;
         border: none;
-        background-color: #fff;
         border-radius: 5px;
         border: 1px solid #000;
+        background-color: #fff;
         outline: none;
     }
-    .send-out a {
+    .send-out button {
         color: #000;
         font-size: 14px;
         font-family: sans-serif;
         text-decoration: none;
         background-color: #EFCFD0;
-        /* padding: 10px 40px; */
         padding: 5px 90px;
-        margin: auto;
+        margin: 15px 0 ;
         border: 1px solid #FFF;
         border-radius: 3px;
         display: inline-block;

@@ -26,8 +26,8 @@
     
 <body>
         <!-- 第8區 聯繫我們 -->
-        <section id="section-contact-us">
-            <div class="container-contact-us">
+        <div id="container-contact-us">
+            <section class="section-contact-us">
                 <div class="contact-us" id="lightBox">
                     <h2>聯絡我們</h2>
                     <div class="contact-info-list">
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>    
     <input type="checkbox" id="menu-switch">
     <!-- 第1區  -->
 <header>
@@ -93,7 +93,6 @@
             <span></span>
             <span></span>
         </label> 
-
     </div>
     <script>
         var searchButton = document.getElementById("searchButton");
@@ -103,19 +102,17 @@
         });
         
         var contactus = document.getElementById("contactus_button");
-        
-        var section_contact_us = document.getElementById("section-contact-us");
-        var container_contact_us = document.getElementsByClassName("container-contact-us")[0];
+        var container_contact_us = document.getElementById("container-contact-us");
+        var section_contact_us = document.getElementsByClassName("section-contact-us")[0];
         
         contactus.addEventListener("click", function () {
-            section_contact_us.style.display="block";
+            container_contact_us.style.display="block";
         });
-        container_contact_us.addEventListener("click", function (e) {
+        section_contact_us.addEventListener("click", function (e) {
             if(e.target.nodeName=="SECTION"){
-                section_contact_us.style.display="none";
+                container_contact_us.style.display="none";
             }
         });
-
     </script>
 </header>
 
@@ -318,7 +315,7 @@
             </div>
         </div>
     </section>
-
+    
 
 
 
@@ -361,5 +358,7 @@
         </div>
     </footer>
 
+
 </body>
+
 </html>
