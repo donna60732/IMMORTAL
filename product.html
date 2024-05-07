@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMMORTAL 花藝坊</title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!--------------------Noto serif TC-------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!---------------------Simonetta--------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
     <!----------------------------css------------------------->
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style-m.css">
@@ -22,143 +30,173 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
             </label>  
         </div>
+
         <div class="banner-pic">
-            <img src="images/banner-pic/Banner-Product.svg" alt="banner-花禮項目">
+            <img src="images/banner-pic/Banner-Product.svg" alt="導覽圖/花禮品項">
             <div class="banner-txt">
-                <h2>花禮品項</h2>
-                <h3>Product</h3>
-            </div>
+            <h2>關於我們</h2>
+            <h3>about us</h3>
         </div>
+
         <div class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">/花禮品項</li>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"> / 花禮品項</li>
+            </ol>
+        </div>
+        
+        <script>
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+            
+            var contactus = document.getElementById("contactus_button");
+            
+            var section_contact_us = document.getElementById("section-contact-us");
+            var container_contact_us = document.getElementsByClassName("container-contact-us")[0];
+            
+            contactus.addEventListener("click", function () {
+                section_contact_us.style.display="block";
+                alert(123);
+            });
+            container_contact_us.addEventListener("click", function () {
+                section_contact_us.style.display="none";
+            });
+        </script>
     </header>
-    <section class="seasonal-festival">
-        <div class="festival">
-            <div class="product-categories">
-                <div class="festival-item">
+    <section class="section-products">
+        <div class="products">
+            <div class="products-categories">
+                <div class="products-item">
                     <span>鮮花花禮</span>
                 </div>
-                <div class="product-cards">
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                <div class="products-card-list">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/fresh flower/blue-flower.jpg" alt="鮮花花束">
                         </div>
-                        <h5>鮮花花束</h5>
+                        <h4>鮮花花束</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/fresh flower/bouquet.png" alt="鮮花捧花">
                         </div>
-                        <h5>鮮花捧花</h5>
+                        <h4>鮮花捧花</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/fresh flower/blue-fl.jpg" alt="鮮花盆花">
                         </div>
-                        <h5>鮮花盆花</h5>
+                        <h4>鮮花盆花</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/fresh flower/red-f.jpg" alt="鮮花">
                         </div>
-                        <h5>鮮花</h5>
+                        <h4>鮮花</h4>
                     </div>
                 </div>
-                <div class="festival-more">
-                    <a href="#">more</a>
+                <div class="products-more">
+                    <a href="#">了解更多</a>
                 </div>
             </div>
-            <div id="preserved-flowers" class="product-categories">
-                <div class="festival-item">
+            <div id="preserved-flowers" class="products-categories">
+                <div class="products-item">
                     <span>永生花禮</span>
                 </div>
-                <div class="product-cards">
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                <div class="products-card-list">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Preserve- Flowers/bouquet-pink.png" alt="永生花束">
                         </div>
-                        <h5>永生花束</h5>
+                        <h4>永生花束</h4>
                     </div>
-                    <div class="product-card">
+                    <div class="products-card">
                         <div class="product-card-pic">
                             <img src="images/Preserve- Flowers/potted-yellow.png" alt="永生盆花">
                         </div>
-                        <h5>永生盆花</h5>
+                        <h4>永生盆花</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Preserve- Flowers/green.png" alt="永生花">
                         </div>
-                        <h5>永生玻璃鐘罩</h5>
+                        <h4>永生玻璃鐘罩</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Preserve- Flowers/purple.png" alt="永生玻璃">
                         </div>
-                        <h5>永生玻璃鐘罩</h5>
+                        <h4>永生玻璃鐘罩</h4>
                     </div>
                 </div>
-                <div class="festival-more">
-                    <a href="product-preserved.html">more</a>
+                <div class="products-more">
+                    <a href="product-preserved.html">了解更多</a>
                 </div>
             </div>
-            <div class="product-categories">
-                <div class="festival-item">
+            <div class="products-categories">
+                <div class="products-item">
                     <span>創意花禮</span>
                 </div>
-                <div class="product-cards">
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                <div class="products-card-list">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Creative flower gifts/lego red  rose.jpg" alt="樂高花束">
                         </div>
-                        <h5>樂高系列</h5>
+                        <h4>樂高系列</h4>
                         </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Creative flower gifts/banknote- flowers.png" alt="紙鈔花束系列">
                         </div>
-                        <h5>紙鈔花束系列</h5>
+                        <h4>紙鈔花束系列</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Creative flower gifts/creative-ch.png" alt="金莎巧克力花束">
                         </div>
-                        <h5>金莎巧克力花束</h5>
+                        <h4>金莎巧克力花束</h4>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-pic">
+                    <div class="products-card">
+                        <div class="products-card-pic">
                             <img src="images/Creative flower gifts/creative.png" alt="創意花禮">
                         </div>
-                        <h5>人體花束Model</h5>
+                        <h4>人體花束Model</h4>
                     </div>
                 </div>
-                <div class="festival-more">
-                    <a href="#">more</a>
+                <div class="products-more">
+                    <a href="#">了解更多</a>
                 </div>
             </div>
         </div>    
     </section>
+    
 
     <!-- footer -->
     <footer>

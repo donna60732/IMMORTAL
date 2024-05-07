@@ -1,5 +1,9 @@
 /* 第1區 */
 /* 手機版 */
+body {
+    font-family:sans-serif ,"simonetta"; 
+    /* font-family: "Noto serif TC";  */
+}
 #menu-switch {
     display: none;
 }
@@ -55,7 +59,8 @@
     }
     .nav-list a {
         font-size: 16px;
-        font-family: "noto-Noto serif TC";
+        font-family: "Noto serif TC";
+        letter-spacing: 1px;
         color: #000;
         display: block;
         margin: 10px 0;
@@ -63,21 +68,28 @@
         text-align: start;
         text-decoration: none;
     }
+    .nav-list a:hover {
+        color: #A3383C;
+    }
     /* ----------------------------------------- */
     .nav-icon {
-        margin: 20px 0;
+        margin: 25px 0  25px 200px;
     }
     .nav-icon a {
         color: #000;
         padding: 30px 15px;
         text-decoration: none;
     }
+    .nav-icon a i {
+        width: 30px;
+        height: 30px;
+    }
     /* ------------------------------- */
     /* 搜尋框 */
     .search-box {
         position: fixed;
         top: 20px;
-        right: 300px;
+        right: 200px;
         width: 100px;
         height: 30px;
         border:1px solid #000;
@@ -116,7 +128,8 @@
     .nav-list a {
         color: #000;
         font-size: 16px;
-        font-family: sans-serif;
+        font-family: "Noto serif TC"; 
+        letter-spacing: 1px;
         text-decoration: none;
         background-color: #EFCFD0;
         display: block;
@@ -126,12 +139,17 @@
     .nav-icon {
         position: absolute;
         top: 25px;
-        right: 70px;
+        /* right: 70px; */
+        right: 100px;
     }
     .nav-icon a {
         color: #000;
         padding-left: 20px;
         text-decoration: none;
+    }
+    .nav-icon a i {
+        width: 20px;
+        height: 20px;
     }
     /*-----------------------------------  */
     /* 搜尋框 */
@@ -168,7 +186,7 @@
         margin: 0 0 18px 90px ;
     }
 }
-/* ------------nav-list 導覽列桌機版------------- */
+/* ------------nav-list 導覽列桌機版------------ */
 @media screen and (min-width: 1024px) {
     .nav-list {
         background-color: #EFCFD0;
@@ -178,13 +196,17 @@
     .nav-list a {
         color: #000;
         font-size: 16px;
-        font-family: sans-serif;
+        font-family: "Noto serif TC";
+        letter-spacing: 1px;
         text-decoration: none;
         background-color: #EFCFD0;
         display: block;
         padding: 5px 60px;
     }
-    /*--------------------icon選單-桌機版---------------------*/
+    .nav-list a:hover {
+        color: #A3383C;
+    }
+    /* ------------icon選單-桌機版 ------------*/
     .nav-icon {
         position: absolute;
         top: 25px;
@@ -231,20 +253,21 @@
 }
 /* --------------------漢堡選單----------------- */
 .hb {
-    width: 35px;
-    height: 35px;
-    /* background-color: #eee; */
-    background-color: #A3383C;
+    width: 30px;
+    height: 30px;
+    background-color: #EFCFD0;
+    /* background-color: #A3383C; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 10px;
 }
 .hb span {
-    width: 80%;
+    width: 70%;
     height: 2px;
     background-color: #fff;
+    background-color: #000;
 }
 #menu-switch:checked~header .header-nav .hb {
     background-color: #EFCFD0;
@@ -282,28 +305,33 @@
 .festival {
     max-width: 1200px;
     margin: auto;
-    padding: 50px 0 30px 0;
+    padding: 50px 0;
 }
 @media screen and (max-width: 767px) {
     /* 共用字體 */
     .title-tc {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
-        font-family: sans-serif;
+        font-family: "Noto serif TC"; 
+        letter-spacing: 1px;
         padding: 5px 0;
     }
     .title-en {
         font-size: 16px;
-        text-align: center;
         font-family: "simonetta";
+        letter-spacing: 1px;
+        text-align: center;
     }
     /* --------------------------- */
+    .festival {
+        padding: 50px 0 60px 0;
+    }
     .festival-pic {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin: 20px 0;
+        margin: 25px 0;
     }
     .cards {
         width: 200px;
@@ -312,13 +340,12 @@
         position: relative;
     }
     .cards span {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
         background-color: #e7e78a;
-        font-size: 14px;
         position: absolute;
         top: 0;
-        padding: 5px 15px;
         z-index: 3;
+        padding: 5px 15px;
     }
     .cards img {
         width: 100%;
@@ -326,35 +353,48 @@
         scale: 1;
         transition: .5s;
     }
+    .cards p {
+        font-size: 12px;
+        background-color: #ddd;
+        position: absolute;
+        bottom: 0;
+        padding: 5px 70px;
+        text-align: center;
+    }
     .cards:hover img {
         scale: 1.1;
     }
-    .more-and {
+    .festival-more-and {
         text-align: center;
-        display: block;
-        margin-top: 30px;
+        margin-top: 35px;
     }
-    .more-and a {
+    .festival-more-and a {
         color: #000;
         font-size: 14px;
-        font-family: sans-serif;
+        letter-spacing: 1px;
         text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
         background-color: #F1DFD5;
         padding: 10px 40px;
         border-radius: 3px;
+    } 
+    .festival-more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
     }
 }
 @media screen and (min-width: 768px) {
     .title-tc {
         font-size: 24px;
-        text-align: center;
         font-family: sans-serif;
+        text-align: center;
         padding: 5px 0;
     }
     .title-en {
         font-size: 22px;
-        text-align: center;
         font-family: "simonetta";
+        text-align: center;
         padding-bottom: 10px;
     }
     .festival-pic {
@@ -372,9 +412,8 @@
         position: relative;
     }
     .cards span {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: #e7e78a;
         font-size: 14px;
+        background-color: #e7e78a;
         position: absolute;
         top: 0;
         padding: 5px 15px;
@@ -387,39 +426,45 @@
         transition: .5s;
     }
     .cards p {
+        font-size: 14px;
         position: absolute;
         bottom: 0;
-        padding: 5px 60px;
+        padding: 5px 65px;
         text-align: center;
         background-color: #ddd;
     }
     .cards:hover img {
         scale: 1.1;
     }
-    .more-and {
+    .festival-more-and {
         text-align: center;
-        display: block;
         margin: 40px 0;
     }
-    .more-and a {
+    .festival-more-and a {
         color: #000;
         font-size: 14px;
-        font-family: sans-serif;
+        letter-spacing: 1px;
         text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
         background-color: #F1DFD5;
         padding: 10px 40px;
         border-radius: 3px;
+    } 
+    .festival-more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
     }
+
 }
 
-/*---------------------第4區 關於我們---------------------*/
+/*---------------------第4區 關於我們----------------*/
 .section-about-us {
     background-color: #F0E9E3;
     background-image: url(../images/material/shadow\ .png);
 }
 .about-us {
     max-width: 1200px;
-    padding: 40px 0;
     margin: auto;
 }
 @media screen and (max-width: 767px) {
@@ -427,21 +472,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 50px 0 100px 0;
     }
+    
     .about-us-info h2 {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
-        font-family: sans-serif;
+        font-family: "Noto serif TC";
+        letter-spacing: 1px;
+        margin-bottom: 5px;
     }
     .about-us-info h3 {
         font-size: 16px;
         font-family: "simonetta";
+        letter-spacing: 1px;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .about-us-pic {
-        width: 150px;
-        height: 167px;
+        width: 210px;
+        height: 227px;
+        padding:  0 0 30px 0 ;
     }
     .about-us-pic img {
         width: 100%;
@@ -451,51 +502,61 @@
         text-align: center;
         height: 150px;
         margin-left: 10px;
-        padding: 50px;
+        padding: 50px 0 0 0 ;
     }
     .about-us-txt p {
         font-size: 14px;
         font-family: "Simonetta";
         line-height: 25px;
+        letter-spacing: 1px;
         text-align: start;
-        margin-bottom: 30px;
     }
-    .about-us-txt a {
+    .aboutus-more-and{
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .aboutus-more-and a {
         color: #000;
         font-size: 14px;
-        font-family: sans-serif;
+        letter-spacing: 1px;
         text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
         background-color: #F1DFD5;
         padding: 10px 40px;
         border-radius: 3px;
+    }
+    .aboutus-more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
     }
 }
 
 @media screen and (min-width: 768px) {
     .about-us {
-        width: 1200px;
-        margin: auto;
         height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 40px 0;
     }
     .about-us-info {
         margin-top: -142px;
     }
     .about-us-info h2 {
         font-size: 24px;
-        text-align: center;
         font-family: sans-serif;
+        text-align: center;
         padding-top: 65px;
         padding-bottom: 10px;
     }
     .about-us-info h3 {
         font-size: 22px;
+        font-family: "simonetta";
         text-align: center;
         padding-top: 2px;
-        padding-bottom: 10px;
-        font-family: "simonetta";
+        padding-bottom: 20px;
     }
     .about-us-pic {
         width: 250px;
@@ -506,28 +567,39 @@
         border-radius: 200px 200px 0 0;
     }
     .about-us-txt {
-        text-align: center;
         height: 300px;
+        text-align: center;
         margin-left: 40px;
-        padding: 10px;
+        padding: 20px;
     }
     .about-us-txt p {
         font-size: 16px;
         line-height: 50px;
         text-align: start;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
-    .about-us-txt a {
+    .aboutus-more-and{
+        text-align: center;
+        /* margin-top: 35px; */
+    }
+    .aboutus-more-and a {
         color: #000;
         font-size: 14px;
+        letter-spacing: 1px;
         text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
         background-color: #F1DFD5;
         padding: 10px 40px;
         border-radius: 3px;
     }
+    .aboutus-more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
+    }
 }
 
-/*------------------- 第5區 花禮品項 ------------------------*/
+/*------------------- 第5區 花禮品項 ------------------*/
     .section-flower-items {
     background-image: url(../images/material/flower.jpg);
 }
@@ -540,24 +612,35 @@
         width: 100%;
         vertical-align: middle;
     }
-
 @media screen and (max-width: 767px) {
     .flower-items-card {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
     .card {
-        width: 165px;
-        height: 165px;
-        margin: 15px;
+        width: 200px;
+        height: 200px;
+        margin: 30px 0;
     }
     .card a {
         color: #000;
-        font-size: 16px;
-        font-family: sans-serif;
+        font-size: 14px;
+        font-family: "Noto serif TC";
+        text-align: center;
         text-decoration: none;
         display: block;
+        margin: 5px 0 ;
+        letter-spacing: 1px;
+    }
+    .card a:hover {
+        color: #939393;
+    }
+    .card a i {
+        width: 10px;
+        height: 10px;
+        margin-top:5px ;
     }
 }
 @media screen and (min-width: 768px) {
@@ -567,7 +650,7 @@
     .flower-items {
         width: 1200px;
         margin: auto;
-        padding: 40px 0;
+        padding: 50px 0;
     }
     .flower-items-card {
         display: flex;
@@ -575,45 +658,44 @@
         justify-content: center;
     }
     .card {
-        width: 265px;
-        height: 265px;
-        margin: 30px;
-        /* position: relative; */
-    }
-    .card img { 
-        width: 100%;
-        vertical-align: middle;
-        /* position: absolute; */
+        width: 250px;
+        height: 250px;
+        margin: 20px;
     }
     .card a {
         color: #000;
-        font-size: 16px;
-        font-family: sans-serif;
+        font-size: 14px;
+        font-family: "Noto serif TC"; 
         text-decoration: none;
         display: block;
+        text-align: center;
+        margin: 5px 0;
+        letter-spacing: 1px;
     }
-    /* .flower-items-card .card::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #0008;
-        opacity: 0;
-        transition: 0.5s;
-    } */
-        /* .flower-items-card:hover .card::after {
-            opacity: 1;
-        } */
+    .card a:hover {
+        color: #939393;
+    }
+    .card a i {
+        width: 10px;
+        height: 10px;
+        margin-top:5px ;
+    }
+    
 
 }
-/*--------------------- 第6區 花藝課程 ---------------------*/
+/*--------------------- 第6區 花藝課程 -----------------*/
 .section-course {
-    background-image: url(../images/material/dust.png);
+
     padding: 40px 0;
 }
-
+.course {
+    max-width: 1200px;
+    margin: auto;
+}
+.item img {
+    width: 100%;
+    vertical-align: middle;
+}
 @media screen and (max-width: 767px) {
     .item {
         border-bottom: 1px solid #888;
@@ -626,30 +708,36 @@
         height: 200px;
         margin: auto;
     }
-    .item img {
-        width: 100%;
-        vertical-align: middle;
-    }
     .item-card h4 {
-        font-size: 22px;
+        font-size: 18px;
         padding: 20px 0 10px;
     }
     .item-card p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
         padding: 5px 0 10px 0;
     }
-    .course a {
+    .more-and {
+        text-align:center ;
+        margin: 15px 0;
+    }
+    .more-and a {
         color: #000;
         font-size: 14px;
-        font-family: sans-serif;
+        letter-spacing: 1px;
         text-decoration: none;
-        background-color: #F1DFD5;
-        border-radius: 3px;
-        padding: 10px 40px;
         display: inline-block;
-        margin: 20px 170px
+        border: 2px solid #F1DFD5;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
     }
+    .more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
+        border: 2px solid #F1DFD5;
+    }
+
 }
 @media screen and (min-width: 768px) {
     .item {
@@ -660,49 +748,41 @@
         padding: 20px 0;
     }
     .item-pic {
-        width: 150px;
-        height: 150px;
-    }
-    .item img {
-        width: 100%;
+        width: 200px;
+        height: 200px;
     }
     .item-card {
         padding: 0 30px;
     }
     .item-card h4 {
-        font-size: 1.5rem;
-        /* font-size: 22px; */
-        padding: 10px 0;
+        font-size:22px;
+        padding: 5px 0;
         font-family: sans-serif;
     }
     .item-card p {
-        font-size: 1rem;
-        /* font-size: 14px; */
+        font-size: 14px;
         font-family: sans-serif;
         line-height: 20px;
     }
-    .course a {
+    .more-and {
+        text-align:center ;
+        margin: 15px 0;
+    }
+    .more-and a {
         color: #000;
         font-size: 14px;
-        font-family: sans-serif;
+        letter-spacing: 1px;
         text-decoration: none;
-        background-color: #F1DFD5;
-        border-radius: 3px;
-        padding: 10px 40px;
         display: inline-block;
-        margin: 20px 550px
+        border: 2px solid #F1DFD5;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
     }
-    .course-top-pic-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .course-top-pic {
-        width: 150px;
-        height: 1500px;
-    }
-    .course-top-pic img {
-        width: 100%;
+    .more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
+        border: 2px solid #F1DFD5;
     }
 }
 
@@ -713,7 +793,8 @@
         justify-content: center;
         border-bottom: 1px solid #888;
         padding: 20px 0;
-        margin: 0 375px;
+        /* margin: 0 375px;  */
+        margin: 0 365px; 
     }
     .item-pic {
         width: 200px;
@@ -726,27 +807,14 @@
         padding: 30px;
     }
     .item-card h4 {
-        font-size: 1.5rem;
-        /* font-size: 22px; */
-        padding: 10px 0;
+        font-size: 22px;
         font-family: sans-serif;
     }
     .item-card p {
-        font-size: 1rem;
-        /* font-size: 14px; */
-        font-family: sans-serif;
-        line-height: 20px;
-    }
-    .course a {
-        color: #000;
         font-size: 14px;
         font-family: sans-serif;
-        text-decoration: none;
-        background-color: #F1DFD5;
-        border-radius: 3px;
-        padding: 10px 40px;
-        display: inline-block;
-        margin: 20px 550px
+        line-height: 20px;
+        padding: 10px 0 ;
     }
     .course-top-pic-list {
         display: flex;
@@ -756,14 +824,34 @@
     .course-top-pic {
         width: 200px;
         height: 200px;
-        margin: 20px 0;
     }
     .course-top-pic img {
         width: 100%;
+        vertical-align: middle;
+    }
+    .more-and {
+        text-align:center ;
+        margin: 15px 0;
+    }
+    .more-and a {
+        color: #000;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
+        background-color: #F1DFD5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
+    .more-and a:hover{
+        color: #000;
+        background-color:#FBF5F5;
+        border: 2px solid #F1DFD5;
     }
 }
 
-/*-------------------第7區 創意花禮 ------------------*/
+/*----------------------第7區 創意花禮 ---------------*/
 .section-creative {
     padding: 40px 0;
 }
@@ -774,20 +862,17 @@
     .section-creative {
         background-color: #F0E9E3;
     }
-
     .creative {
         width: 1200px;
         margin: auto;
         padding: 30px 0;
     }
-
     .creative-pic-list {
         width: 450px;
         height: 450px;
         display: flex;
         margin: 0 200px;
     }
-
     .creative-pic {
         width: 0px;
         font-size: 40px;
@@ -795,16 +880,13 @@
         overflow: hidden;
         transition: 1s;
     }
-
     .creative-pic img {
         width: 100%;
     }
-
     .creative-pic:hover {
         flex-grow: 2;
     }
 }
-
 /* ------------------------------------------------- */
 /* footer */
 footer {
@@ -974,34 +1056,31 @@ footer {
 
 /* ---------------------------------------- */
 /* 內頁共用 */
+/* banner */
 .banner-pic img {
     width: 100%;
     vertical-align: middle;
 }
-
 @media screen and (max-width: 767px) {
-
-    /* banner */
     .banner-pic {
-        width: 757px;
+        width: 100%;
+        margin: auto;
         position: relative;
     }
-
     .banner-txt {
-        text-align: center;
+        padding: 8px 10px;
+        text-align: center; 
         background-color: hsl(0, 100%, 100%, 60%);
         position: absolute;
-        top: 20px;
-        left: 200px;
-        padding: 10px 20px;
+        top: 10px;
+        left: 200px; 
     }
-
     .banner-txt h2 {
         font-size: 18px;
-        line-height: 30px;
+        line-height: 20px;
     }
     .banner-txt h3 {
-        font-size: 14px;
+        font-size: 12px;
         font-family: "simonetta";
     }
     /* ---------------------麵包屑-------------------- */
@@ -1025,44 +1104,43 @@ footer {
 }
 @media screen and (min-width: 768px) {
     .banner-pic {
-        width: 1263px;
+        width: 100%;
+        margin: auto;
         position: relative;
     }
-
     .banner-txt {
+        padding: 10px 20px; 
+        margin: auto;
         text-align: center;
-        background-color: hsl(0, 100%, 100%, 60%);
         position: absolute;
+        background-color: hsl(0, 100%, 100%, 60%);
+        /* top: 50% ; 
+        left: 50% ; */
         top: 50px;
         left: 570px;
-        padding: 10px 20px;
     }
-
     .banner-txt h2 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 30px;
     }
-
     .banner-txt h3 {
         font-size: 16px;
         font-family: "simonetta";
     }
-
     /* 麵包屑 */
     .nav-breadcrumb {
+        font-size: 14px;
         height: 20px;
+        margin: 20px 0 20px 30px;
         padding-left: 190px;
     }
-
     .nav-breadcrumb ol {
         display: flex;
     }
-
     .nav-breadcrumb ol li {
         font-size: 16px;
         line-height: 20px;
     }
-
     .nav-breadcrumb ol li a {
         color: #000;
         text-decoration: none;
@@ -1080,6 +1158,7 @@ footer {
     }
     .festival-item h4 {
         font-size: 20px;
+        font-family: "Noto serif TC";
         text-align: center;
     }
     .product-cards {
@@ -1087,11 +1166,15 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px 0;
+        padding: 15px 0;
     }
     .product-card {
         background-color: #EFEEEE;
-        margin: 0 10px;
+        margin: 10px 10px;
+    }
+    .product-card a {
+        color: #000;
+        text-decoration: none;
     }
     .product-card-pic {
         width: 200px;
@@ -1102,12 +1185,14 @@ footer {
         vertical-align: middle;
     }
     .product-card h5 {
-        font-size: 14px;
-        padding: 10px 5px;
+        font-size: 16px;
+        padding: 10px 10px;
+        margin-top: 5px;
     }
     .product-card p {
         font-size: 16px;
-        padding: 10px 5px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
     }
     .festival-more {
         text-align: center;
@@ -1132,7 +1217,8 @@ footer {
         text-align: center;
     }
     .festival-item h4 {
-        font-size: 20px;
+        font-size: 22px;
+        font-family: "Noto serif TC";
         text-align: center;
     }
     .product-cards {
@@ -1145,6 +1231,10 @@ footer {
         background-color: #EFEEEE;
         margin: 0 10px;
     }
+    .product-card a {
+        color: #000;
+        text-decoration: none;
+    }
     .product-card-pic {
         width: 200px;
         height: 200px;
@@ -1154,12 +1244,12 @@ footer {
         vertical-align: middle;
     }
     .product-card h5 {
-        font-size: 14px;
-        padding: 10px 5px;
+        font-size: 16px;
+        padding: 15px 5px;
     }
     .product-card p {
         font-size: 16px;
-        padding: 10px 5px;
+        padding: 5px;
     }
     .festival-more {
         text-align: center;
@@ -1177,36 +1267,47 @@ footer {
 
 /* 第 3 頁: about-us */
 
+.about-shop-pic img {
+    width: 100%;
+    vertical-align: middle;
+}
+.about {
+    max-width: 1200px;
+    margin: auto;
+}
 @media screen and (max-width: 767px) {
+    .about-txt {
+        height: 250px;
+        padding-top: 50px;
+    }
+    .about-txt p {
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+    }
     .about-shop-pic {
         width: 250px;
         height: 250px;
         margin: auto;
         display: none;
     }
-
-    .about-shop-pic img {
+    .about-map {
+        border: 2px solid #EFCFD0;
+        width: 400px;
+        height: 100%;
+        margin: auto;
+        /* height: 225px; */
+    }
+    .about-map iframe{
         width: 100%;
         vertical-align: middle;
     }
-
-    .about-txt {
-        height: 250px;
-        padding-top: 50px;
-    }
-
-    .about-txt p {
-        font-size: 16px;
-        line-height: 40px;
-        text-align: center;
-    }
-
     .about-info-txt {
+        height: 350px;
         text-align: center;
         padding: 0 50px;
-        height: 300px;
+        
     }
-
     .about-info-txt p {
         padding: 40px;
         font-size: 14px;
@@ -1214,19 +1315,7 @@ footer {
         text-align: center;
     }
 }
-
 @media screen and (min-width: 768px) {
-    .about-shop-pic {
-        width: 880px;
-        height: 300px;
-        margin: auto;
-        display: flex;
-        gap: 10px;
-    }
-    .about-shop-pic img {
-        width: 100%;
-        vertical-align: middle;
-    }
     .about-txt {
         height: 250px;
         padding-top: 50px;
@@ -1235,6 +1324,13 @@ footer {
         font-size: 16px;
         line-height: 40px;
         text-align: center;
+    }
+    .about-shop-pic {
+        width: 880px;
+        height: 300px;
+        margin: auto;
+        display: flex;
+        gap: 10px;
     }
     .about-info {
         height: 600px;
@@ -1244,7 +1340,11 @@ footer {
     }
     .about-map {
         width: 600px;
-        height: 450px;
+        height: 100%;
+    }
+    .about-map iframe{
+        width: 100%;
+        vertical-align: middle;
     }
     .about-info-txt {
         height: 450px;
@@ -1303,16 +1403,144 @@ footer {
     }
 }
 
-/* 第 4 頁:product */
+/* 第 4 頁:product.html */
+.section-products {
+    background-color: #FFF;
+}
+.products {
+    max-width: 1200%;
+    margin: auto;
+}
+.products-card-pic img {
+    width: 100%;
+    vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+    .products-categories {
+        padding: 30px 0;
+    }
+    .products-item {
+        text-align: center;
+    }
+    .products-item span {
+        font-size: 20px;
+        font-family: "Noto serif TC";
+        text-align: center;
+    }
+    .products-card-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .products-card {
+        background-color: #EFEEEE;
+        margin: 10px 10px;
+    }
+    .products-card a {
+        color: #000;
+        text-decoration: none;
+    }
+    .products-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .products-card-pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .products-card h4 {
+        font-size: 16px;
+        padding: 10px 10px;
+        margin-top: 5px;
+    }
+    .products-card p {
+        font-size: 16px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+    }
+    .products-more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .products-more a {
+        color: #000;
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+        border: 2px solid #F1DFD5;
+        background-color: #EFCFD0;;
+        padding: 10px 25px;
+        border-radius: 3px;
+    }
+    .products-more a:hover{
+        color: #000;
+        background-color:#FBF5F5;
+    }
+}
 
-@media screen and (max-width: 767px) {}
+@media screen and (min-width: 768px) {
 
-@media screen and (min-width: 768px) {}
+    .products-categories {
+        padding: 30px 0;
+    }
+    .products-item {
+        text-align: center;
+    }
+    .products-item span {
+        border-bottom: 3px solid #F1DFD5 ;
+        font-size: 20px;
+        font-family: "Noto serif TC";
+        text-align: center;
+        display: inline-block;
+        margin: 15px;
+        padding-bottom: 10px;
+    }
+    .products-card-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .products-card {
+        background-color: #EFEEEE;
+        margin: 10px;
+    }
+    .products-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .products-card h4 {
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    .products-more {
+        text-align: center;
+        margin:40px 0;
+    }
+    .products-more a {
+        color: #000;
+        font-size: 12px;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid #F1DFD5;
+        background-color:#FBF5F5;
+        padding: 10px 40px;
+        border-radius: 3px;
+    }
+    .products-more a:hover{
+        color: #000;
+        background-color: #EFCFD0;
+    }
+
+}
 
 /* 第 5 頁: course*/
 @media screen and (max-width: 767px) {
     .seasonal-flower-course {
-        background-image:url(../images/material/dust.png);
         padding: 20px 0;
     }
     .flower-courses {
@@ -1353,7 +1581,7 @@ footer {
     }
     .courses-card p {
         font-size: 16px;
-        font-family: "simonetta";
+        font-family: sans-serif;
         text-align: center;
         padding: 0 5px;
     }
@@ -1386,11 +1614,10 @@ footer {
 }
 @media screen and (min-width: 768px) {
     .seasonal-flower-course {
-        background-image:url(../images/material/dust.png);
-        padding: 40px 0;
+        padding: 20px 0;
     }
     .flower-courses {
-        max-width: 1200;
+        max-width: 1200px;
     }
     .courses-title h4 {
         font-size: 22px;
@@ -1408,6 +1635,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 20px;
     }
     .courses-card {
         margin: 10px;
@@ -1421,19 +1649,22 @@ footer {
         vertical-align: middle;
     }
     .courses-card h5 {
-        font-size: 14px;
+        font-size: 16px;
         font-family: sans-serif;
+        letter-spacing: 1px;
         padding: 5px 5px;
     }
     .courses-card p {
         font-size: 16px;
-        font-family: "simonetta";
+        font-family: "Noto serif TC";
+        letter-spacing: 1px;
         padding: 0 5px;
     }
     /* ------------頁數------------- */
     .pagination {
         display: inline-block;
-        margin: 30px 480px;
+        margin-top: 40px;
+        margin: 20px 450px;
     }
     .pagination a {
         color: black;
@@ -1460,11 +1691,9 @@ footer {
 }
 
 /* 第 6 頁:contact */
-@media screen and (max-width: 767px) {}
-
-@media screen and (min-width: 768px) {
-    #section-contact-us {
+#section-contact-us {
         display: none;
+        /* position: fixed; */
     }
     .container-contact-us {
         width: 100%;
@@ -1476,6 +1705,7 @@ footer {
         background-color: rgb(221, 221, 221,60%);
         z-index: 99;
     }
+@media screen and (max-width: 767px) {
     .contact-us {
         width: 600px;
         height: 500px;
@@ -1525,7 +1755,59 @@ footer {
         margin: 10px 0 ;
         border-radius: 3px;
         display: inline-block;
-        
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-us {
+        width: 800px;
+        height: 500px;
+        border-radius: 20px;
+        /* margin: 10px;
+        padding: 30px 0; */
+        background-color: #F0E9E3;
+    }
+    .contact-us h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 40px 0;
+    }
+    .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-info {
+        margin: 5px;
+    }
+    .contact-info h3 {
+        font-size: 14px;
+        margin: 5px;
+    }
+    .contact-info input {
+        background-color: #F0E9E3;
+        width: 200px;
+        height: 30px;
+        border: 1px solid #000;
+        outline: none;
+    }
+    .contact-info textarea {
+        width: 200px;
+        background-color: #F0E9E3;
+        border: 1px solid #000;
+        outline: none;
+    }
+    .send-out a {
+        color: #000;
+        font-size: 14px;
+        font-family: sans-serif;
+        text-decoration: none;
+        background-color: #EFCFD0;
+        padding: 10px 40px;
+        margin: 10px 0 ;
+        border-radius: 3px;
+        display: inline-block;
     }
 }
 
@@ -1537,8 +1819,7 @@ footer {
 
 
 @media screen and (min-width: 768px) {
-    /* courseinfo.html 與 Productinfo 商品列表 共用*/
-    /* 圖片區 */
+    /* 大小圖片區 與 courseinfo.html  共用 */
     .purchase-course-info {
         display: flex;
         align-items: center;
@@ -1571,6 +1852,7 @@ footer {
         width: 100%;
         vertical-align: middle;
     }
+    /* ---文字區--- */
     .purchase-course-infom {
         height: 500px;
     }
@@ -1604,28 +1886,11 @@ footer {
         height: 27px;
     }
     .course-quantity .number {
-        border-top: 1px solid #CDCFA7;
-        border-bottom: 1px solid #CDCFA7;
         padding: 5px 50px;
     }
     .purchase-course-date p {
         font-size: 12px;
         margin: 5px 0;
-    }
-    .date-choose {
-        display: flex;
-        flex-direction: column;
-    }
-    .date-choose button {
-        width: 155px;
-        height: 30px;
-        border: 1px solid #000;
-        border-radius: 20px;
-        margin: 5px 0;
-    }
-    .date-choose button:nth-child(1) {
-        background-color: #CDCFA7;
-        border: 1px solid #fff;
     }
     /* 文字介紹 價錢區*/
     .purchase-product-infom {
@@ -1663,83 +1928,69 @@ footer {
         background-color: #fff;
     }
     .product-quantity .number {
-        border: 1px solid #000;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
         padding: 5px 45px;
     }
+    /* 加入我的最愛 */
     .purchase-product-favorites {
-        margin: 15px 0;
+        margin: 20px 70px;
     }
-    .purchase-product-favorites button {
+    .favorites-pic {
+        width: 15px;
+        height: 15px;
+    }
+    .favorites-pic img {
+        width: 100%;
+    }
+    /* .purchase-product-favorites button {
+        color: #000;
+        font-size: 14px;
         width: 155px;
         height: 30px;
-        border: 1px solid #000;
-        border-radius: 20px;
-    }
+        border: 2px solid #F1DFD5;
+        background-color: #F1DFD5;
+        border-radius: 3px;
+    } */
+    /* 加入購物車 */
     .purchase-product-cart {
         margin: 15px 0;
     }
     .purchase-product-cart button {
+        color: #000;
+        font-size: 14px;
         width: 155px;
         height: 30px;
-        border: 1px solid #000;
-        border-radius: 20px;
+        border: 2px solid #F1DFD5;
+        background-color: #F1DFD5;
+        border-radius: 3px;
     }
-    /* 加入購物車 */
-    .purchase-course-cart {
-        margin: 10px 0;
-    }
-    .purchase-course-cart button {
-        width: 155px;
-        height: 30px;
-        border: 1px solid #000;
+    /* 商品介紹 訂購須知 送貨與付款方式區*/
+    .section-service-item-list {
+        background-color: #FFF;
     }
     .product-service-item-list{
-        background: #fff;
-    }
-    /* 加入我的最愛 */
-    .purchase-product-favorites button{
-        width: 155px;
-        height: 30px;
-        border: 1px solid #000;
-        border-radius: 20px;
-        margin: 10px 0;
-    }
-    .favorites-pic {
-        width: 30px;
-        height: 30px;
-    }
-    .favorites-pics img {
-        width: 100%;
-    }
-    .purchase-course-favorites span {
-        width: 155px;
-        height: 30px;
-        border: 1px solid #000;
-        border-radius: 20px;
-    }
-    .service-item-list {
-        height: 900px;
-        margin: 30px 0;
-        padding: 20px 0;
+        max-width: 1200px;
+        height: 500px;
+        margin: auto;
     }
     .service-item {
         display: flex;
         justify-content: center;
     }
-    .service-item a {
+    .service-item button {
+        font-size: 14px;
+        border: 1px solid #F1DFD5;
+        border-radius: 3px;
+        background-color: #F1DFD5;
         padding: 10px 20px;
-        margin: 0 60px;
-        border-radius: 20px;
-        color: #000;
-        background-color: #F0E9E3;
-        font-size: 16px;
-        text-decoration: none;
+        margin: 0 40px;
     }
     .service-info {
         margin: 30px 200px;
         text-align: center;
         background-color: #F0E9E3;
-        padding: 40px 0;
+        padding:40px 0;
     }
     .service-info h4 {
         font-size: 18px;
@@ -1750,29 +2001,12 @@ footer {
         line-height: 25px;
         padding: 5px 40px 10px 20px;
     }
-    /* 商品介紹 訂購須知 送貨與付款方式區*/
-    .product-service-item-list {
-        height: 500px;
-        margin: 30px 0;
-        padding: 20px 0;
-    }
-    .product-service-item {
-        display: flex;
-        justify-content: center;
-    }
-    .product-service-item a {
-        padding: 10px 20px;
-        margin: 0 60px;
-        border-radius: 20px;
-        color: #000;
-        font-size: 16px;
-        text-decoration: none;
-    }
+    /*  */
     .product-service-info {
         margin: 30px 200px;
         text-align: center;
         background-color: #F0E9E3;
-        padding: 40px 0;
+        padding:40px 0;
     }
     .product-service-info h4 {
         font-size: 18px;
@@ -1785,33 +2019,94 @@ footer {
     }
 }
 /*第 8 頁:sign-in */
+
+
 @media screen and (max-width: 767px) {
-    .section-sign-in {
-        height: 400px;
-    }
-    .sign-in {
-        width: 420px;
+    .container-sign-in {
+        width: 100%;
+        height:100%;
         padding: 40px 0;
         margin: auto;
     }
-    .sign-in h2 {
-        font-size: 24px;
-        padding: 20px 0;
+    .login {
+        width: 300px;
+        height: 100%;
+        background-color: white;
+        border-radius: 5px;
+        margin: auto;
+        padding: 10px;
+        box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     }
-    .account-password input {
-        color: #FFF;
-        border: 1px solid #FFF;
-        border-radius: 3px;
-        background-color: #EFCFD0;
+    .login h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 15px;
+        margin-top: 15px;
     }
-    .forget-password {
+    form {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+    }
+    /* 登入 */
+    .account-list {
         margin: 10px 0;
-    }
-    .forget-password a {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+        margin: 10px 0;
         font-size: 12px;
     }
-    .account-password button {
-        color: #FFF;
+    .account-list label {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 5px 50px;
+    }
+    .account-list input{
+        width: 200px;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+    }
+    /* 密碼 */
+    .password-list {
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .password-list label {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 5px 50px;
+    }
+    .password-list input{
+        width: 200px;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+    }
+    /* 忘記密碼 */
+    .forget {
+        font-size: 12px;
+        color: #000;
+        text-align: right;
+        padding: 5px 50px 0 0;
+    }
+    .login-btn {
+        color: #000;
         font-size: 14px;
         font-family: sans-serif;
         outline: none;
@@ -1819,54 +2114,149 @@ footer {
         padding: 5px 90px;
         border: 1px solid #FFF;
         border-radius: 3px;
-    }
-    .other-sign-in {
+        display: inline-block;
+        margin: auto;
+    } 
+    /* 其他登入方式 */
+    form .or {
+        font-size: 10px;
         display: flex;
+        color: #999;
+        margin: 20px 40px;
     }
-    .registered {
+    form .or::before,
+    form .or::after {
+        content: "";
+        width: 100px;
+        border-bottom: 1px solid #999;
+        margin: auto;
+    }
+    .other-ways {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .other-ways a {
+        text-decoration: none;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        margin: 0 20px;
+    }
+    .other-ways a:nth-child(2) {
+        width: 28px;
+        height: 28px;
+    }
+    .other-ways a img {
+        width: 100%;
+    } 
+    /* 註冊 */
+    .sign-up {
         padding: 50px 0;
     }
-    .registered h3 {
+    .sign-up h3 {
         font-size: 20px;
-        margin: 10px 0;
+        margin: 10px auto;
     }
-    .registered button {
-        color: #EFCFD0;
+    .sign-up button {
+        width: 200px;
+        color: #000;
         font-size: 14px;
         font-family: sans-serif;
-        padding: 5px 80px;
-        border: 1px solid #EFCFD0;
         border-radius: 3px;
-        background-color: #FFF;
+    border: 1px solid #EFCFD0;
+        background-color: #EFCFD0;
+        padding: 5px 80px;
     }
+
 }
 @media screen and (min-width: 768px) {
-    .section-sign-in {
-        height: 500px;
-    }
-    .sign-in {
-        width: 420px;
+    .container-sign-in {
+        width: 100%;
+        height:100%;
         padding: 40px 0;
         margin: auto;
     }
-    .sign-in h2 {
-        font-size: 24px;
-        padding: 20px 0;
+    .login {
+        width: 300px;
+        height: 100%;
+        background-color: white;
+        border-radius: 5px;
+        margin: auto;
+        padding: 10px;
+        box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     }
-    .account-password input {
-        color: #FFF;
-        border: 1px solid #FFF;
-        border-radius: 3px;
-        background-color: #EFCFD0;
+    .login h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 15px;
+        margin-top: 15px;
     }
-    .forget-password {
+    form {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+    }
+    /* 登入 */
+    .account-list {
         margin: 10px 0;
-    }
-    .forget-password a {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+        margin: 10px 0;
         font-size: 12px;
     }
-    .account-password button {
-        color: #FFF;
+    .account-list label {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 5px 50px;
+    }
+    .account-list input{
+        width: 200px;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+    }
+    /* 密碼 */
+    .password-list {
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-evenly;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .password-list label {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 5px 50px;
+    }
+    .password-list input{
+        width: 200px;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+    }
+    /* 忘記密碼 */
+    .forget {
+        font-size: 12px;
+        color: #000;
+        text-align: right;
+        padding: 5px 50px 0 0;
+    }
+    .login-btn {
+        color: #000;
         font-size: 14px;
         font-family: sans-serif;
         outline: none;
@@ -1874,25 +2264,59 @@ footer {
         padding: 5px 90px;
         border: 1px solid #FFF;
         border-radius: 3px;
-    }
-    .other-sign-in {
+        display: inline-block;
+        margin: auto;
+    } 
+    /* 其他登入方式 */
+    form .or {
+        font-size: 10px;
         display: flex;
+        color: #999;
+        margin: 20px 40px;
     }
-    .registered {
+    form .or::before,
+    form .or::after {
+        content: "";
+        width: 100px;
+        border-bottom: 1px solid #999;
+        margin: auto;
+    }
+    .other-ways {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    .other-ways a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 20px;
+        width: 18px;
+        height: 18px;
+    }
+    .other-ways a:nth-child(2) {
+        width: 20px;
+        height: 20px;
+    }
+    .other-ways a img {
+        width: 100%;
+    }
+    /* 註冊 */
+    .sign-up {
         padding: 50px 0;
     }
-    .registered h3 {
-        font-size: 24px;
-        margin: 10px 0;
+    .sign-up h3 {
+        font-size: 20px;
+        margin: 10px auto;
     }
-    .registered button {
-        color: #EFCFD0;
+    .sign-up button {
+        width: 200px;
+        color: #000;
         font-size: 14px;
         font-family: sans-serif;
-        padding: 5px 80px;
-        border: 1px solid #EFCFD0;
         border-radius: 3px;
-        background-color: #FFF;
+        border: 1px solid #EFCFD0;
+        background-color: #EFCFD0;
+        padding: 5px 80px;
     }
 }
 /* 第 00 頁:Festival */

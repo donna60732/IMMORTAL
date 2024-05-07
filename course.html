@@ -36,16 +36,23 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
@@ -63,11 +70,17 @@
                 <li class="breadcrumb-item">
                     <a href="index.html">首頁</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">/花藝課程</li>
+                <li class="breadcrumb-item active" aria-current="page">/ 花藝課程</li>
             </ol>
         </div>
+        <script>
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+        </script>
     </header>
-
     <section class="seasonal-flower-course">
         <div class="flower-courses">
             <div class="courses-title">

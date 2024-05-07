@@ -9,6 +9,14 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
     <link href="/your-path-to-uicons/css/uicons-rounded-regular.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <!--------------------Noto serif TC-------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!---------------------Simonetta--------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
     <!------------------------- CSS ------------------------->
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style-m.css">
@@ -28,35 +36,44 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
             </label>  
         </div>
-        <div class="banner-pic">
-                <img src="images/banner-pic/Banner-Product.svg" alt="花禮品項">
-        </div>
         <div class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="index.html">/花禮品項</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">/商品列表</li>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">/商品列表</li>
+            </ol>
+        </div>
+        <script>
+            // 搜尋框
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+        </script>
     </header>
     <section class="section-purchase-course">
         <div class="purchase-course-info">
@@ -92,20 +109,24 @@
                 <div class="purchase-product-cart">
                     <button>加入購物車</button>
                 </div>
+                <div class="purchase-product-cart">
+                    <button>立即購買</button>
+                </div>
                 <div class="purchase-product-favorites">
                     <div class="favorites-pic">
-                        <button>加入我的最愛</button>
+                        <img src="./images/material/heart.svg" alt="加入我的最愛"> 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="section-service-item-list">
         <div class="product-service-item-list">
-            <div class="service-item" id="product-desciption">
-                <a href="productinfo.html #product-desciption">商品介紹</a>
-                <a href="#">訂購須知</a>
-                <a href="#">送貨與付款方式</a>
+            <div class="service-item" 
+                role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">商品介紹</button>
+                <button type="button" class="btn btn-outline-primary">訂購須知</button>
+                <button type="button" class="btn btn-outline-primary">送貨與付款方式</button>
             </div>
             <div class="product-service-info">
                 <h4>❚ 商品特色 ❚</h4>

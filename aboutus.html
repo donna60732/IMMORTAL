@@ -26,10 +26,18 @@
                 <a href="contact.html">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
                 <!-- <i class="fi fi-rr-menu-burger"></i> -->
@@ -46,18 +54,25 @@
                 </div>
         </div>
         <div class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page"> / 關於我們</li>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">首頁</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"> / 關於我們</li>
+            </ol>
+        </div>
+        <script>
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+        </script>
     </header>
     <section>
         <div class="about">
             <div class="about-txt">
-                <p>我們是一家於2020年成立的花藝坊，<br>
+                <p> 在2020年成立的花藝坊，<br>
                     致力於為客戶提供高品質花束和花藝服務的花店。<br>
                     我們的花藝師精心挑選最優質的花材，<br>
                     並以獨特的設計手法打造出精美的花束和花藝品，<br>

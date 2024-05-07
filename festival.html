@@ -35,36 +35,50 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
             </label>  
         </div>
         <div class="banner-pic">
-            <img src="images/banner-pic/Banner-Festival.jpg" alt="banner-母親節花禮">
+            <img src="images/banner-pic/Banner-Festival.jpg" alt="導覽圖/母親節花禮">
             <div class="banner-txt">
-                <h2>母親節花禮</h2>
-                <h3>Happy Mother's Day</h3>
+            <h2>關於我們</h2>
+            <h3>about us</h3>
             </div>
-        </div>
-        <div class="nav-breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">首頁</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">/節慶限定-母親節花禮</li>
-                </ol>
-            </div>
+    </div>
+    <div class="nav-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">首頁</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"> / 節慶限定-母親節花禮</li>
+        </ol>
+    </div>
+        <script>
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+        </script>
     </header>
     <section class="seasonal-festival">
         <div class="festival">
@@ -105,15 +119,17 @@
             </div>
             <div class="product-categories">
                 <div class="festival-item">
-                <h4>永生花</h4>
+                    <h4>永生花</h4>
                 </div>
                 <div class="product-cards">
                 <div class="product-card">
+                    <a href="productinfo.html">
                     <div class="product-card-pic">
-                        <a href="productinfo.html"><img src="images/festival-mother/mother-flower.jpg" alt="母親節花束"></a>
+                        <img src="images/festival-mother/mother-flower.jpg" alt="母親節花束">
                     </div>
                     <h5>康乃馨盆花-杏色</h5>
                     <p>NT$1,280</p>
+                    </a>
                 </div>
                 <div class="product-card">
                     <div class="product-card-pic">

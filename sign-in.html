@@ -25,42 +25,73 @@
                 <a href="aboutus.html">關於我們</a>
                 <a href="product.html">花禮品項</a>
                 <a href="course.html">花藝課程</a>
-                <a href="contact.html">聯絡我們</a>
+                <a href="#" id="contactus_button">聯絡我們</a>
             </nav>
             <div class="nav-icon">
-                <!-- <input type="search"> -->
-                <a href="#"><i class="fi fi-rr-search"></i></a>
-                <a href="sign-in.html"><i class="fi fi-rr-user"></i></a>
-                <a href="#"><i class="fi fi-rr-shopping-cart"></i></a>
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" placeholder="尋找商品">
+                </div>
+                <a href="#" id="searchButton">
+                    <i class="fi fi-rr-search"></i>
+                </a>
+                <a href="sign-in.html">
+                    <i class="fi fi-rr-user"></i>
+                </a>
+                <a href="#">
+                    <i class="fi fi-rr-shopping-cart"></i>
+                </a>
             </div>
             <label for="menu-switch" class="hb">
-                <!-- <i class="fi fi-rr-menu-burger"></i> -->
                 <span></span>
                 <span></span>
                 <span></span>
             </label>  
         </div>
+        <script>
+            var searchButton = document.getElementById("searchButton");
+            var searchBox = document.getElementById("searchBox");
+            searchButton.addEventListener("click", function () {
+                searchBox.classList.toggle("active");
+            });
+        </script>
     </header>
     <section class="section-sign-in">
-        <div class="sign-in">
-            <h2>登入</h2>
-            <form class="account-password">
-                <input type="text" placeholder="帳號">
-                <div class="sign-in-password">
-                    <input type="password" placeholder="密碼">
-                    <i class="fi fi-rr-eye-crossed"></i>
+        <div class="container-sign-in">
+            <div class="login">
+                <h2>登入 Login</h2>
+                <form>
+                    <div class="account-list">
+                        <label for="account">帳號</label>
+                        <input type="text" id="account" 
+                        placeholder="使用者名稱">
+                    </div>
+                    <div class="password-list">
+                        <label for="password">密碼</label>
+                        <input type="password" id="password" placeholder="輸入密碼">
+                        <!-- <i class="fi fi-rr-eye-crossed"></i> -->
+                        <a href="#" class="forget">忘記密碼?</a>
+                    </div>
+                    <button class="login-btn">登入</button>
+                    <p class="or">或</p>
+                    <div class="other-ways">
+                        <a href="">
+                            <img src="./images/material/facebook.svg" alt="fb icon">
+                        </a>
+                        <a href="">
+                            <img src="./images/material/google.svg" alt="google icon">
+                        </a>
+                    </div>
+
+                    <div class="sign-up">
+                    <h3>還不是會員?</h3>
+                    <button>註冊</button>
                 </div>
-                <div class="forget-password">
-                    <a href="#">忘記密碼?</a>
-                </div>
-                <button>登入</button>
-            </form>
-            <div class="registered">
-                <h3>還不是會員?</h3>
-                <button>註冊會員</button>
+                </form>
             </div>
         </div>
     </section>
+
+    
     <!-- footer -->
     <footer>
         <div class="footer-item-list">

@@ -54,8 +54,11 @@
             </ol>
         </div>
     </header>
-    <section class="section-contact-us">
-        <div class="contact-us" id="lightBox" style="display:none">
+
+    <!------------------ 第8區 聯繫我們 --------------------->
+<section id="section-contact-us">
+    <div class="container-contact-us">
+        <div class="contact-us" id="lightBox">
             <h2>聯絡我們</h2>
             <div class="contact-info-list">
                 <div class="contact-info">
@@ -83,18 +86,21 @@
                 </div>
             </div>
         </div>
-        <script>
-            function showLightBox(){ //--------
-            let lightBox = document.getElementById("lightBox");
-            lightBox.style.display = "block";
-        }
-            function init(){
-            document.getElementById("conTact").onclick = showLightBox;
-        }
-
-        window.addEventListener("load", init, false);
-        </script>
-    </section>
+    </div>
+</section>
+<script>
+    let contactus = document.getElementById("contactus_button");
+    
+    let section_contact_us = document.getElementById("section-contact-us");
+    let container_contact_us = document.getElementsByClassName("container-contact-us")[0];
+    
+    contactus.addEventListener("click", function () {
+        section_contact_us.style.display="block";
+    });
+    container_contact_us.addEventListener("click", function () {
+        section_contact_us.style.display="none";
+    });
+</script>
 <!-- footer -->
     <footer>
         <div class="footer-item-list">
