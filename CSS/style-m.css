@@ -27,7 +27,6 @@ body {
         background-color: #EFCFD0;
         display: flex;
         justify-content: space-between;
-        padding: 5px;
         position: relative;
     }
     .nav-logo {
